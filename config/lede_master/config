@@ -133,13 +133,13 @@ CONFIG_DEFAULT_luci=y
 CONFIG_DEFAULT_luci-app-accesscontrol=y
 CONFIG_DEFAULT_luci-app-arpbind=y
 CONFIG_DEFAULT_luci-app-autoreboot=y
-CONFIG_DEFAULT_luci-app-ddns=y
-CONFIG_DEFAULT_luci-app-filetransfer=y
+# CONFIG_DEFAULT_luci-app-ddns is not set
+# CONFIG_DEFAULT_luci-app-filetransfer is not set
 CONFIG_DEFAULT_luci-app-nlbwmon=y
 CONFIG_DEFAULT_luci-app-ssr-plus=y
-CONFIG_DEFAULT_luci-app-turboacc=y
+# CONFIG_DEFAULT_luci-app-turboacc is not set
 CONFIG_DEFAULT_luci-app-upnp=y
-CONFIG_DEFAULT_luci-app-vlmcsd=y
+# CONFIG_DEFAULT_luci-app-vlmcsd is not set
 CONFIG_DEFAULT_luci-app-vsftpd=y
 CONFIG_DEFAULT_luci-app-wol=y
 CONFIG_DEFAULT_luci-proto-ipv6=y
@@ -1710,7 +1710,7 @@ CONFIG_PACKAGE_urngd=y
 CONFIG_PACKAGE_usign=y
 # CONFIG_PACKAGE_uxc is not set
 # CONFIG_PACKAGE_wireless-tools is not set
-# CONFIG_PACKAGE_zram-swap is not set
+CONFIG_PACKAGE_zram-swap=y
 # CONFIG_PACKAGE_zyxel-bootconfig is not set
 # end of Base system
 
@@ -2529,7 +2529,7 @@ CONFIG_PACKAGE_kmod-nf-conntrack6=y
 CONFIG_PACKAGE_kmod-nf-flow=y
 CONFIG_PACKAGE_kmod-nf-ipt=y
 CONFIG_PACKAGE_kmod-nf-ipt6=y
-# CONFIG_PACKAGE_kmod-nf-ipvs is not set
+CONFIG_PACKAGE_kmod-nf-ipvs=y
 CONFIG_PACKAGE_kmod-nf-log=y
 CONFIG_PACKAGE_kmod-nf-log6=y
 CONFIG_PACKAGE_kmod-nf-nat=y
@@ -2545,16 +2545,16 @@ CONFIG_PACKAGE_kmod-nfnetlink=y
 # CONFIG_PACKAGE_kmod-nfnetlink-queue is not set
 # CONFIG_PACKAGE_kmod-nft-arp is not set
 # CONFIG_PACKAGE_kmod-nft-bridge is not set
-# CONFIG_PACKAGE_kmod-nft-compat is not set
+CONFIG_PACKAGE_kmod-nft-compat=y
 # CONFIG_PACKAGE_kmod-nft-connlimit is not set
-# CONFIG_PACKAGE_kmod-nft-core is not set
+CONFIG_PACKAGE_kmod-nft-core=y
 # CONFIG_PACKAGE_kmod-nft-dup-inet is not set
-# CONFIG_PACKAGE_kmod-nft-fib is not set
+CONFIG_PACKAGE_kmod-nft-fib=y
 # CONFIG_PACKAGE_kmod-nft-fullcone is not set
-# CONFIG_PACKAGE_kmod-nft-nat is not set
+CONFIG_PACKAGE_kmod-nft-nat=y
 # CONFIG_PACKAGE_kmod-nft-nat6 is not set
 # CONFIG_PACKAGE_kmod-nft-netdev is not set
-# CONFIG_PACKAGE_kmod-nft-offload is not set
+CONFIG_PACKAGE_kmod-nft-offload=y
 # CONFIG_PACKAGE_kmod-nft-queue is not set
 # CONFIG_PACKAGE_kmod-nft-socket is not set
 # CONFIG_PACKAGE_kmod-nft-tproxy is not set
@@ -2884,7 +2884,7 @@ CONFIG_PACKAGE_kmod-thermal=y
 # CONFIG_PACKAGE_kmod-tpm-i2c-infineon is not set
 # CONFIG_PACKAGE_kmod-tpm-tis is not set
 CONFIG_PACKAGE_kmod-wdt-sp805=y
-# CONFIG_PACKAGE_kmod-zram is not set
+CONFIG_PACKAGE_kmod-zram=y
 # end of Other modules
 
 #
@@ -5018,7 +5018,7 @@ CONFIG_ZLIB_OPTIMIZE_SPEED=y
 # 1. Collections
 #
 CONFIG_PACKAGE_luci=y
-# CONFIG_PACKAGE_luci-lib-docker is not set
+CONFIG_PACKAGE_luci-lib-docker=y
 CONFIG_PACKAGE_luci-light=y
 # CONFIG_PACKAGE_luci-nginx is not set
 # CONFIG_PACKAGE_luci-ssl is not set
@@ -5132,14 +5132,14 @@ CONFIG_PACKAGE_luci-app-arpbind=y
 # CONFIG_PACKAGE_luci-app-dawn is not set
 # CONFIG_PACKAGE_luci-app-dcwapd is not set
 # CONFIG_PACKAGE_luci-app-ddns is not set
-# CONFIG_PACKAGE_luci-app-ddns-go is not set
+CONFIG_PACKAGE_luci-app-ddns-go=y
 # CONFIG_PACKAGE_luci-app-diag-core is not set
 CONFIG_PACKAGE_luci-app-diskman=y
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_btrfs_progs=y
 CONFIG_PACKAGE_luci-app-diskman_INCLUDE_lsblk=y
 # CONFIG_PACKAGE_luci-app-diskman_INCLUDE_mdadm is not set
 # CONFIG_PACKAGE_luci-app-dnscrypt-proxy is not set
-# CONFIG_PACKAGE_luci-app-dockerman is not set
+CONFIG_PACKAGE_luci-app-dockerman=y
 # CONFIG_PACKAGE_luci-app-dufs is not set
 # CONFIG_PACKAGE_luci-app-dump1090 is not set
 # CONFIG_PACKAGE_luci-app-dynapoint is not set
@@ -5147,7 +5147,7 @@ CONFIG_PACKAGE_luci-app-diskman_INCLUDE_lsblk=y
 # CONFIG_PACKAGE_luci-app-example is not set
 # CONFIG_PACKAGE_luci-app-fileassistant is not set
 # CONFIG_PACKAGE_luci-app-filebrowser is not set
-CONFIG_PACKAGE_luci-app-filetransfer=y
+#CONFIG_PACKAGE_luci-app-filetransfer is not set
 CONFIG_PACKAGE_luci-app-firewall=y
 # CONFIG_PACKAGE_luci-app-fogvdn is not set
 CONFIG_PACKAGE_luci-app-frpc=y
@@ -5232,7 +5232,7 @@ CONFIG_PACKAGE_luci-app-opkg=y
 # CONFIG_PACKAGE_luci-app-rclone_INCLUDE_rclone-ng is not set
 # CONFIG_PACKAGE_luci-app-rp-pppoe-server is not set
 # CONFIG_PACKAGE_luci-app-samba is not set
-# CONFIG_PACKAGE_luci-app-samba4 is not set
+CONFIG_PACKAGE_luci-app-samba4=y
 # CONFIG_PACKAGE_luci-app-scutclient is not set
 # CONFIG_PACKAGE_luci-app-ser2net is not set
 # CONFIG_PACKAGE_luci-app-shadowsocks-libev is not set
@@ -5259,7 +5259,7 @@ CONFIG_PACKAGE_luci-app-opkg=y
 # CONFIG_PACKAGE_luci-app-travelmate is not set
 # CONFIG_PACKAGE_luci-app-trojan-server is not set
 CONFIG_PACKAGE_luci-app-ttyd=y
-CONFIG_PACKAGE_luci-app-turboacc=y
+# CONFIG_PACKAGE_luci-app-turboacc is not set
 CONFIG_PACKAGE_TURBOACC_INCLUDE_FLOW_OFFLOADING=y
 # CONFIG_PACKAGE_TURBOACC_INCLUDE_FAST_CLASSIFIER is not set
 # CONFIG_PACKAGE_TURBOACC_INCLUDE_SHORTCUT_FE_CM is not set
@@ -5276,7 +5276,7 @@ CONFIG_PACKAGE_luci-app-upnp=y
 # CONFIG_PACKAGE_luci-app-v2ray-server is not set
 # CONFIG_PACKAGE_luci-app-v2raya is not set
 # CONFIG_PACKAGE_luci-app-verysync is not set
-CONFIG_PACKAGE_luci-app-vlmcsd=y
+# CONFIG_PACKAGE_luci-app-vlmcsd is not set
 # CONFIG_PACKAGE_luci-app-vnstat is not set
 # CONFIG_PACKAGE_luci-app-vnstat2 is not set
 # CONFIG_PACKAGE_luci-app-vsftpd is not set
@@ -5295,7 +5295,7 @@ CONFIG_PACKAGE_luci-app-wol=y
 #
 # 4. Themes
 #
-# CONFIG_PACKAGE_luci-theme-argon is not set
+CONFIG_PACKAGE_luci-theme-argon=y
 CONFIG_PACKAGE_luci-theme-bootstrap=y
 # CONFIG_PACKAGE_luci-theme-design is not set
 CONFIG_PACKAGE_luci-theme-material=y
@@ -5392,7 +5392,7 @@ CONFIG_PACKAGE_luci-i18n-arpbind-zh-cn=y
 CONFIG_PACKAGE_luci-i18n-base-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-base-zh-tw is not set
 CONFIG_PACKAGE_luci-i18n-diskman-zh-cn=y
-CONFIG_PACKAGE_luci-i18n-filetransfer-zh-cn=y
+# CONFIG_PACKAGE_luci-i18n-filetransfer-zh-cn is not set
 # CONFIG_PACKAGE_luci-i18n-firewall-ar is not set
 # CONFIG_PACKAGE_luci-i18n-firewall-bg is not set
 # CONFIG_PACKAGE_luci-i18n-firewall-bn is not set
@@ -5593,7 +5593,7 @@ CONFIG_PACKAGE_luci-i18n-turboacc-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-upnp-vi is not set
 CONFIG_PACKAGE_luci-i18n-upnp-zh-cn=y
 # CONFIG_PACKAGE_luci-i18n-upnp-zh-tw is not set
-CONFIG_PACKAGE_luci-i18n-vlmcsd-zh-cn=y
+# CONFIG_PACKAGE_luci-i18n-vlmcsd-zh-cn is not set
 # CONFIG_PACKAGE_luci-i18n-vlmcsd-zh-tw is not set
 # CONFIG_PACKAGE_luci-i18n-wol-ar is not set
 # CONFIG_PACKAGE_luci-i18n-wol-bg is not set
@@ -5945,7 +5945,7 @@ CONFIG_PACKAGE_miniupnpd=y
 # CONFIG_BIND_JEMALLOC is not set
 # CONFIG_PACKAGE_bind-tools is not set
 # CONFIG_PACKAGE_chinadns-ng is not set
-# CONFIG_PACKAGE_ddns-go is not set
+CONFIG_PACKAGE_ddns-go=y
 CONFIG_PACKAGE_ddns-scripts=y
 # CONFIG_PACKAGE_ddns-scripts-cloudflare is not set
 # CONFIG_PACKAGE_ddns-scripts-cnkuai is not set
@@ -6232,9 +6232,9 @@ CONFIG_PACKAGE_ip-full=y
 # CONFIG_PACKAGE_openssh-moduli is not set
 # CONFIG_PACKAGE_openssh-server is not set
 # CONFIG_PACKAGE_openssh-server-pam is not set
-# CONFIG_PACKAGE_openssh-sftp-avahi-service is not set
+CONFIG_PACKAGE_openssh-sftp-avahi-service=y
 # CONFIG_PACKAGE_openssh-sftp-client is not set
-# CONFIG_PACKAGE_openssh-sftp-server is not set
+CONFIG_PACKAGE_openssh-sftp-server=y
 # CONFIG_PACKAGE_openssh-sk-helper is not set
 # CONFIG_PACKAGE_sshtunnel is not set
 # CONFIG_PACKAGE_tmate is not set
@@ -6782,11 +6782,11 @@ CONFIG_PACKAGE_ppp-mod-pppoe=y
 # CONFIG_PACKAGE_rustdesk-server is not set
 # CONFIG_PACKAGE_safe-search is not set
 # CONFIG_PACKAGE_samba36-server is not set
-# CONFIG_PACKAGE_samba4-admin is not set
-# CONFIG_PACKAGE_samba4-client is not set
-# CONFIG_PACKAGE_samba4-libs is not set
-# CONFIG_PACKAGE_samba4-server is not set
-# CONFIG_PACKAGE_samba4-utils is not set
+CONFIG_PACKAGE_samba4-admin=y
+CONFIG_PACKAGE_samba4-client=y
+CONFIG_PACKAGE_samba4-libs=y
+CONFIG_PACKAGE_samba4-server=y
+CONFIG_PACKAGE_samba4-utils=y
 # CONFIG_PACKAGE_samplicator is not set
 # CONFIG_PACKAGE_scapy is not set
 # CONFIG_PACKAGE_sctp-tools is not set
@@ -7431,9 +7431,9 @@ CONFIG_PACKAGE_coreutils-uptime=y
 # CONFIG_PACKAGE_digitemp is not set
 # CONFIG_PACKAGE_digitemp-usb is not set
 CONFIG_PACKAGE_dmesg=y
-# CONFIG_PACKAGE_docker is not set
-# CONFIG_PACKAGE_docker-compose is not set
-# CONFIG_PACKAGE_dockerd is not set
+CONFIG_PACKAGE_docker=y
+CONFIG_PACKAGE_docker-compose=y
+CONFIG_PACKAGE_dockerd=y
 # CONFIG_PACKAGE_domoticz is not set
 # CONFIG_PACKAGE_dos2unix is not set
 # CONFIG_PACKAGE_dropbearconvert is not set
