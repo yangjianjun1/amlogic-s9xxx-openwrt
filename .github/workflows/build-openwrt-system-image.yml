@@ -354,7 +354,7 @@ jobs:
           fi
           source_branch_input="${{ inputs.source_branch }}"
           REPO_NAME="${source_branch_input%_*}"
-          REPO_BRANCH="${openwrtopenwrt-24.10}"
+          REPO_BRANCH="${openwrt-24.10}"
 
           # Clone source code
           git clone -q --single-branch --depth=1 --branch=${REPO_BRANCH} ${REPO_URL} openwrt
