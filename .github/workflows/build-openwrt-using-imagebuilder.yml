@@ -55,6 +55,7 @@ on:
           - bdy-g18-pro
           - beikeyun
           - boca-tcn100
+          - boca-tcn200
           - cd1000
           - chainedbox
           - cm3588-nas
@@ -92,6 +93,7 @@ on:
           - king3399
           - kylin3399
           - lckfb-tspi
+          - lckfb-tspi-3m
           - leez
           - lx-r3s
           - lyt-t68m
