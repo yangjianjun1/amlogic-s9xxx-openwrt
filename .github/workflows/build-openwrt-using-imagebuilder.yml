@@ -19,7 +19,7 @@ on:
         type: choice
         options:
           - openwrt:25.12.5
-          - openwrt:24.10.7
+          - openwrt:24.10.8
           - immortalwrt:25.12.1
           - immortalwrt:24.10.6
       openwrt_board:
@@ -89,6 +89,7 @@ on:
           - h88k-v3
           - h96-max-m2
           - hk1-rbox-k8s
+          - houzzkit-f1
           - hs530r
           - ht2
           - hugsun-x99
