@@ -77,7 +77,7 @@ on:
           - gea-6319
           - gzpeite-p01
           - h28k
-          - h339pc
+          - h33pc
           - h618-ai-douhe
           - h618-devboard
           - h66k
@@ -448,6 +448,15 @@ jobs:
         run: cd openwrt/ && ./scripts/feeds update -a
       - name: Install feeds
         run: cd openwrt/ && ./scripts/feeds install -a
+
+      - name: Fix batman-adv for kernel 6.18
+        run: |
+          cd openwrt/
+          sed -i 's/PKG_VERSION:=2023.[0-9]*/PKG_VERSION:=2026.1/' feeds/routing/batman-adv/Makefile
+          sed -i '/PKG_HASH:=/d' feeds/routing/batman-adv/Makefile
+          echo "=== batman-adv version after fix ==="
+          grep PKG_VERSION feeds/routing/batman-adv/Makefile
+
       - name: Load custom configuration
         run: |
           [[ -d "files" ]] && mv -f files openwrt/files
@@ -496,7 +505,6 @@ jobs:
           echo -e "ccache directory size:"
           du -sh $(pwd)/.ccache 2>/dev/null || echo "No ccache directory found."
           echo "status=success" >> ${GITHUB_OUTPUT}
-
       # ========== 新增：备份全部编译出来的 ipk 插件 ==========
       - name: Backup all ipk packages
         id: backup_ipk
@@ -513,7 +521,6 @@ jobs:
           ls -lhR output/ipk-packages
           echo "status=success" >> ${GITHUB_OUTPUT}
       # ========== 新增结束 ==========
-
       - name: Clean up build files and reclaim disk space
         id: clean
         if: ${{ steps.compile.outputs.status == 'success' && !cancelled() }}
