@@ -7,11 +7,12 @@
 
 board_config_update
 
-# Power LEDs on the XY3528 front panel:
-#   green:power (GPIO4_B1) - solid on while running
-#   red:power   (GPIO4_B7) - used as a network activity indicator
-ucidef_set_led_default "power" "POWER" "green:power" "1"
-ucidef_set_led_netdev "net" "NET" "red:power" "eth0"
+# Power LEDs on the XY3528 front panel (LED names come from the DTS
+# node names, since the nodes have no label property):
+#   led-green (GPIO4_B3) - solid on while running
+#   led-red   (GPIO4_C1) - used as a network activity indicator
+ucidef_set_led_default "power" "POWER" "led-green" "1"
+ucidef_set_led_netdev "net" "NET" "led-red" "eth0"
 
 board_config_flush
 

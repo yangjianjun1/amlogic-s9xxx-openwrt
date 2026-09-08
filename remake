@@ -1171,7 +1171,7 @@ EOF
     }
     [[ -f "etc/inittab" ]] && {
         sed -i 's/ttyAMA0/ttyAML0/' etc/inittab
-        sed -i 's/ttyS0/tty0/' etc/inittab
+        [[ "${board}" != "xingyicloud" ]] && sed -i 's/ttyS0/tty0/' etc/inittab
     }
 
     # Automatic expansion of the third and fourth partitions on first boot

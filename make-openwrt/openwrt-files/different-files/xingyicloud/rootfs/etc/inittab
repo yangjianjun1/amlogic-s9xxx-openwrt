@@ -2,4 +2,3 @@
 ::shutdown:/etc/init.d/rcS K shutdown
 tty1::askfirst:/usr/libexec/login.sh
 ttyS0::askfirst:/usr/libexec/login.sh
-ttyFIQ0::askfirst:/usr/libexec/login.sh
