@@ -1,0 +1,13 @@
+!.gitignore
+/make-openwrt/kernel
+/make-openwrt/u-boot
+/openwrt
+/openwrt-armsr
+/out
+/tmp
+.DS_Store
+npm-debug.log*
+*.rej
+*.orig
+*~
+\#*#
