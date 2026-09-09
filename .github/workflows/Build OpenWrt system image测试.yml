@@ -454,8 +454,11 @@ jobs:
           cd openwrt/
           sed -i 's/PKG_VERSION:=2023.[0-9]*/PKG_VERSION:=2026.1/' feeds/routing/batman-adv/Makefile
           sed -i '/PKG_HASH:=/d' feeds/routing/batman-adv/Makefile
+          sed -i '/^PKG_VERSION:=/a PKG_HASH:=6487dd3b4ad0f85510dedbba335fe77b1b877d0e77393c51ddca07a7451b8f45' feeds/routing/batman-adv/Makefile
           echo "=== batman-adv version after fix ==="
           grep PKG_VERSION feeds/routing/batman-adv/Makefile
+          grep PKG_HASH feeds/routing/batman-adv/Makefile
+
 
       - name: Load custom configuration
         run: |
