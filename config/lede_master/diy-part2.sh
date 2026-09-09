@@ -56,3 +56,23 @@ git clone -b main https://github.com/ophub/luci-app-amlogic.git package/luci-app
 # git apply ../config/patches/{0001*,0002*}.patch --directory=feeds/luci
 #
 # ------------------------------- Other ends -------------------------------
+#============================================
+# Fix open-app-filter del_timer_sync for kernel 6.18
+#============================================
+OAF_DIR="package/feeds/packages/net/open-app-filter"
+if [ -d "${OAF_DIR}" ]; then
+    echo "Applying open-app-filter timer API fix..."
+    mkdir -p "${OAF_DIR}/patches"
+    cat > "${OAF_DIR}/patches/100-fix-timer-api.patch" <<'EOF'
+--- a/oaf/src/app_filter.c
++++ b/oaf/src/app_filter.c
+@@ -1565,7 +1565,7 @@ void init_oaf_timer(void)
+ 
+ void fini_oaf_timer(void)
+ {
+-	del_timer_sync(&oaf_timer);
++	timer_delete_sync(&oaf_timer);
+ }
+EOF
+    echo "Patch applied."
+fi
