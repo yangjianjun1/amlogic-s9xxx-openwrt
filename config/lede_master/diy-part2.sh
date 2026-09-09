@@ -52,9 +52,6 @@ fi
 rm -rf package/luci-app-amlogic
 git clone -b main https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
 #
-# Add OpenAppFilter (jjm2473 修复分支，ghproxy加速)
-rm -rf package/OpenAppFilter
-git clone https://github.com/jjm2473/OpenAppFilter.git package/OpenAppFilter
 # Apply patch
 # git apply ../config/patches/{0001*,0002*}.patch --directory=feeds/luci
 #
