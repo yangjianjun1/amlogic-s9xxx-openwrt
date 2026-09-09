@@ -1,9 +1,0 @@
---- a/oaf/src/app_filter.c
-+++ b/oaf/src/app_filter.c
-@@ -1565,7 +1565,7 @@ void init_oaf_timer(void)
- 
- void fini_oaf_timer(void)
- {
--	del_timer_sync(&oaf_timer);
-+	timer_delete_sync(&oaf_timer);
- }
