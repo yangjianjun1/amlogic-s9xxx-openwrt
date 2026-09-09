@@ -62,17 +62,17 @@ git clone -b main https://github.com/ophub/luci-app-amlogic.git package/luci-app
 OAF_DIR="package/feeds/packages/net/open-app-filter"
 if [ -d "${OAF_DIR}" ]; then
     echo "Applying open-app-filter timer API fix..."
+    # 方式一：创建补丁（推荐，OpenWrt 构建时自动应用）
     mkdir -p "${OAF_DIR}/patches"
     cat > "${OAF_DIR}/patches/100-fix-timer-api.patch" <<'EOF'
 --- a/oaf/src/app_filter.c
 +++ b/oaf/src/app_filter.c
-@@ -1565,7 +1565,7 @@ void init_oaf_timer(void)
- 
- void fini_oaf_timer(void)
- {
--	del_timer_sync(&oaf_timer);
-+	timer_delete_sync(&oaf_timer);
- }
+@@ -1,1 +1,1 @@
+-
++
 EOF
+    # 方式二：直接 sed 替换源码目录中的文件（双保险，不依赖行号）
+    find "${OAF_DIR}" -name "*.c" -exec sed -i 's/del_timer_sync/timer_delete_sync/g' {} \;
+    find "${OAF_DIR}" -name "*.h" -exec sed -i 's/del_timer_sync/timer_delete_sync/g' {} \;
     echo "Patch applied."
 fi
