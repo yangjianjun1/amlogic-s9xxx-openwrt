@@ -48,6 +48,10 @@ fi
 
 # ------------------------------- Other started -------------------------------
 #
+# 拉取 luci-app-poweroffdevice（master 分支即 24.10 JS 版）
+git clone https://github.com/sirpdboy/luci-app-poweroffdevice.git package/chajian/poweroffdevice
+# 拉取 luci-app-mosdns（含 mosdns 主程序 + v2dat）
+git clone https://github.com/sbwml/luci-app-mosdns.git package/chajian/mosdns
 # Add luci-app-amlogic
 rm -rf package/luci-app-amlogic
 git clone -b main https://github.com/ophub/luci-app-amlogic.git package/luci-app-amlogic
