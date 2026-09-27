@@ -1,0 +1,520 @@
+#============================================================================================
+# https://github.com/ophub/amlogic-s9xxx-openwrt
+# Description: Build OpenWrt system image from source
+#============================================================================================
+name: Build OpenWrt system image 测试
+on:
+  repository_dispatch:
+  workflow_dispatch:
+    inputs:
+      source_branch:
+        description: "Select the source branch"
+        required: false
+        default: "all"
+        type: choice
+        options:
+          - all
+          - openwrt_main
+          - lede_master
+          - immortalwrt_master
+      openwrt_board:
+        description: "Select device board"
+        required: false
+        default: "all"
+        type: choice
+        options:
+          - all
+          - allwinner
+          - amlogic
+          - rockchip
+          - rockchip50
+          - rockchip50_100
+          - rockchip100_150
+          - first50
+          - range50_100
+          - range100_150
+          - last50
+          - a311d-oes_s922x-oes-plus_wxy-oect
+          - nsy-g16-plus_nsy-g68-plus_bdy-g18-pro_bdy-g98
+          - s905d_s905x3_s912_s922x-ct2000
+          - a311d
+          - a311d-oes
+          - alark35-3500
+          - anas3035
+          - aio-3399b
+          - aio-3399c
+          - aio-3399c-ai
+          - bdkj-bd-one
+          - bdy-g18-pro
+          - bdy-g98
+          - beikeyun
+          - boca-tcn100
+          - boca-tcn200
+          - bt-100m
+          - bt-1000m
+          - cd1000
+          - chainedbox
+          - cm3588-nas
+          - crrc
+          - dc-a588
+          - dg3399
+          - dg-nas-lite
+          - dlfr100
+          - e20c
+          - easepi-a2
+          - eaidk-610
+          - elfboard-elf2
+          - emb3531
+          - fine3399
+          - firefly-itx-3588j
+          - firefly-jd4
+          - firefly-rk3399
+          - fmx1-pro
+          - fmx1-pro-b
+          - gea-6319
+          - gzpeite-p01
+          - h28k
+          - h339pc
+          - h618-ai-douhe
+          - h66k
+          - h68k
+          - h88k
+          - h96max
+          - h96max-x4
+          - h96max-v56
+          - h96max-v58
+          - h96max-v59
+          - h96max-v60
+          - h96max-v61
+          - h96max-v62
+          - h96max-v63
+          - h96max-v64
+          - h96max-v65
+          - h96max-v66
+          - h96max-v67
+          - h96max-v68
+          - h96max-v69
+          - h96max-v70
+          - h96max-v71
+          - h96max-v72
+          - h96max-v73
+          - h96max-v74
+          - h96max-v75
+          - h96max-v76
+          - h96max-v77
+          - h96max-v78
+          - h96max-v79
+          - h96max-v80
+          - h96max-v81
+          - h96max-v82
+          - h96max-v83
+          - h96max-v84
+          - h96max-v85
+          - h96max-v86
+          - h96max-v87
+          - h96max-v88
+          - h96max-v89
+          - h96max-v90
+          - h96max-v91
+          - h96max-v92
+          - h96max-v93
+          - h96max-v94
+          - h96max-v95
+          - h96max-v96
+          - h96max-v97
+          - h96max-v98
+          - h96max-v99
+          - h96max-v100
+          - h96max-v101
+          - h96max-v102
+          - h96max-v103
+          - h96max-v104
+          - h96max-v105
+          - h96max-v106
+          - h96max-v107
+          - h96max-v108
+          - h96max-v109
+          - h96max-v110
+          - h96max-v111
+          - h96max-v112
+          - h96max-v113
+          - h96max-v114
+          - h96max-v115
+          - h96max-v116
+          - h96max-v117
+          - h96max-v118
+          - h96max-v119
+          - h96max-v120
+          - h96max-v121
+          - h96max-v122
+          - h96max-v123
+          - h96max-v124
+          - h96max-v125
+          - h96max-v126
+          - h96max-v127
+          - h96max-v128
+          - h96max-v129
+          - h96max-v130
+          - h96max-v131
+          - h96max-v132
+          - h96max-v133
+          - h96max-v134
+          - h96max-v135
+          - h96max-v136
+          - h96max-v137
+          - h96max-v138
+          - h96max-v139
+          - h96max-v140
+          - h96max-v141
+          - h96max-v142
+          - h96max-v143
+          - h96max-v144
+          - h96max-v145
+          - h96max-v146
+          - h96max-v147
+          - h96max-v148
+          - h96max-v149
+          - h96max-v150
+          - h96max-v151
+          - h96max-v152
+          - h96max-v153
+          - h96max-v154
+          - h96max-v155
+          - h96max-v156
+          - h96max-v157
+          - h96max-v158
+          - h96max-v159
+          - h96max-v160
+          - h96max-v161
+          - h96max-v162
+          - h96max-v163
+          - h96max-v164
+          - h96max-v165
+          - h96max-v166
+          - h96max-v167
+          - h96max-v168
+          - h96max-v169
+          - h96max-v170
+          - h96max-v171
+          - h96max-v172
+          - h96max-v173
+          - h96max-v174
+          - h96max-v175
+          - h96max-v176
+          - h96max-v177
+          - h96max-v178
+          - h96max-v179
+          - h96max-v180
+          - h96max-v181
+          - h96max-v182
+          - h96max-v183
+          - h96max-v184
+          - h96max-v185
+          - h96max-v186
+          - h96max-v187
+          - h96max-v188
+          - h96max-v189
+          - h96max-v190
+          - h96max-v191
+          - h96max-v192
+          - h96max-v193
+          - h96max-v194
+          - h96max-v195
+          - h96max-v196
+          - h96max-v197
+          - h96max-v198
+          - h96max-v199
+          - h96max-v200
+      openwrt_kernel:
+        description: "Select kernel version"
+        required: false
+        default: "6.12.y_6.18.y"
+        type: choice
+        options:
+          - 5.10.y
+          - 5.15.y
+          - 6.1.y
+          - 6.6.y
+          - 6.12.y
+          - 6.18.y
+          - 5.10.y_5.15.y
+          - 6.1.y_6.6.y
+          - 6.12.y_6.18.y
+          - 6.1.y_6.12.y
+          - 6.1.y_6.18.y
+      auto_kernel:
+        description: "Auto use the latest kernel"
+        required: false
+        default: true
+        type: boolean
+      kernel_repo:
+        description: "Set the kernel repository"
+        required: false
+        default: "ophub/kernel"
+        type: choice
+        options:
+          - ophub/kernel
+      kernel_usage:
+        description: "Set the tags of the stable kernel."
+        required: false
+        default: "stable"
+        type: choice
+        options:
+          - stable
+          - flippy
+          - beta
+      openwrt_ip:
+        description: "Set OpenWrt default IP address."
+        required: false
+        default: "192.168.1.1"
+      use_ccache:
+        description: "Auto use ccache."
+        required: false
+        default: true
+        type: boolean
+      openwrt_storage:
+        description: "Select image storage type."
+        required: false
+        default: "save"
+        type: choice
+        options:
+          - save
+          - temp
+      builder_name:
+        description: "Set OpenWrt builder signature."
+        required: false
+        default: "ophub"
+        type: choice
+        options:
+          - ophub
+          - angel
+          - yourname
+env:
+  TZ: Etc/UTC
+  CCACHE_DIR: /builder/openwrt/.ccache
+jobs:
+  setup:
+    runs-on: ubuntu-24.04
+    outputs:
+      matrix: ${{ steps.set-matrix.outputs.matrix }}
+    steps:
+      - name: Set build matrix based on source_branch input
+        id: set-matrix
+        run: |
+          if [[ "${{ inputs.source_branch }}" == "all" ]]; then
+            MATRIX='{"include":[{"branch":"openwrt_main"},{"branch":"lede_master"},{"branch":"immortalwrt_master"}]}'
+          else
+            MATRIX='{"include":[{"branch":"${{ inputs.source_branch }}"}]}'
+          fi
+          echo "matrix=${MATRIX}" >> "${GITHUB_OUTPUT}"
+  build:
+    needs: setup
+    runs-on: ubuntu-24.04
+    if: ${{ github.event.repository.owner.id == github.event.sender.id }}
+    permissions:
+      contents: write
+    strategy:
+      fail-fast: false
+      matrix: ${{ fromJSON(needs.setup.outputs.matrix) }}
+    name: build-${{ matrix.branch }}
+    env:
+      FEEDS_CONF: config/${{ matrix.branch }}/feeds.conf.default
+      CONFIG_FILE: config/${{ matrix.branch }}/config
+      DIY_P1_SH: config/${{ matrix.branch }}/diy-part1.sh
+      DIY_P2_SH: config/${{ matrix.branch }}/diy-part2.sh
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Initialize the build environment
+        id: init
+        env:
+          DEBIAN_FRONTEND: noninteractive
+        run: |
+          docker rmi -f $(docker images -q) 2>/dev/null || true
+          [[ -n "${AGENT_TOOLSDIRECTORY}" ]] && sudo rm -rf "${AGENT_TOOLSDIRECTORY}"
+          sudo rm -rf /usr/share/dotnet /usr/local/lib/android 2>/dev/null
+          sudo swapoff -a
+          sudo rm -f /swapfile /mnt/swapfile
+          sudo apt-get -y update
+          sudo apt-get -y purge azure-cli ghc* zulu* llvm* firefox google* dotnet* powershell openjdk* mongodb* moby* || true
+          sudo apt-get -y install $(curl -fsSL https://ophub.org/ubuntu2404-make-openwrt-depends)
+          sudo systemctl daemon-reload
+          sudo apt-get -y autoremove --purge
+          sudo apt-get clean
+          sudo sed -i 's/^# deb-src/deb-src/' /etc/apt/sources.list
+          sudo timedatectl set-timezone UTC
+          sudo ntpdate ntp.ubuntu.com || true
+          date -u
+          echo "status=success" >> ${GITHUB_OUTPUT}
+      - name: Create virtual disk for extended storage
+        id: disk
+        run: |
+          root_avail=$(df -P / | awk 'NR==2 {print $4}')
+          if [[ ${root_avail} -lt 15000000 ]]; then
+            echo "Create 30G virtual disk ..."
+            fallocate -l 30G /tmp/img.raw
+            sudo losetup -f /tmp/img.raw
+            build_dev=$(sudo losetup -j /tmp/img.raw | awk '{print $1}' | sed 's/://')
+            sudo mkfs.xfs ${build_dev}
+            sudo mkdir -p /builder
+            sudo mount ${build_dev} /builder
+          else
+            sudo mkdir -p /builder
+          fi
+          sudo chown -R runner:runner /builder
+          df -Th
+          echo "status=success" >> ${GITHUB_OUTPUT}
+      - name: Clone source code [ ${{ matrix.branch }} ]
+        id: codes
+        working-directory: /builder
+        if: ${{ steps.init.outputs.status == 'success' && !cancelled() }}
+        run: |
+          if [[ "${{ matrix.branch }}" =~ ^openwrt ]]; then
+              REPO_URL="https://github.com/openwrt/openwrt"
+          elif [[ "${{ matrix.branch }}" =~ ^lede ]]; then
+              REPO_URL="https://github.com/coolsnowwolf/lede"
+          elif [[ "${{ matrix.branch }}" =~ ^immortalwrt ]]; then
+              REPO_URL="https://github.com/immortalwrt/immortalwrt"
+          else
+              echo "Error: Unknown source code repository."
+              exit 1
+          fi
+          source_branch_input="${{ matrix.branch }}"
+          REPO_NAME="${source_branch_input%_*}"
+          REPO_BRANCH="${source_branch_input##*_}"
+          git clone -q --single-branch --depth=1 --branch=${REPO_BRANCH} ${REPO_URL} openwrt
+          ln -sf /builder/openwrt ${{ github.workspace }}/openwrt
+          ln -sf /builder/openwrt /home/runner/work/_actions/ophub/amlogic-s9xxx-openwrt/main/openwrt
+          echo "build_tag=OpenWrt_${{ matrix.branch }}_${{ inputs.openwrt_storage }}_$(date +"%Y.%m")" >> ${GITHUB_ENV}
+          echo "REPO_URL=${REPO_URL}" >> ${GITHUB_ENV}
+          echo "REPO_NAME=${REPO_NAME}" >> ${GITHUB_ENV}
+          echo "REPO_BRANCH=${REPO_BRANCH}" >> ${GITHUB_ENV}
+          echo "status=success" >> ${GITHUB_OUTPUT}
+      - name: Load custom feeds
+        run: |
+          [[ -f "${FEEDS_CONF}" ]] && cp -f ${FEEDS_CONF} openwrt/feeds.conf.default
+          chmod +x ${DIY_P1_SH}
+          cd openwrt
+          ${{ github.workspace }}/${DIY_P1_SH}
+      - name: Update feeds
+        run: cd openwrt && ./scripts/feeds update -a
+      - name: Install feeds
+        run: cd openwrt && ./scripts/feeds install -a
+      - name: Load custom config
+        run: |
+          [[ -d "files" ]] && mv -f files openwrt/files
+          [[ -f "${CONFIG_FILE}" ]] && cp -f ${CONFIG_FILE} openwrt/.config
+          chmod +x ${DIY_P2_SH}
+          cd openwrt
+          ${{ github.workspace }}/${DIY_P2_SH} "${{ inputs.openwrt_ip }}" "${{ inputs.use_ccache }}"
+      - name: Download packages
+        id: package
+        run: |
+          cd openwrt
+          make defconfig
+          make download -j8
+          find dl -size -1024c -exec ls -l {} \;
+          find dl -size -1024c -exec rm -f {} \;
+      - name: Get OpenWrt source commit hash
+        id: openwrthash
+        run: |
+          repo_path="$(echo "${{ env.REPO_URL }}" | awk -F"github.com/" '{print $2}')"
+          api_url="https://api.github.com/repos/${repo_path}/git/ref/heads/${{ env.REPO_BRANCH }}"
+          source_hash=$(curl -fsSL -m 20 \
+              -H "Accept: application/vnd.github+json" \
+              -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+              ${api_url} | jq -r '.object.sha')
+          [[ -z "${source_hash}" || "${source_hash}" == "null" ]] && source_hash="${{ github.sha }}"
+          echo "source_hash=${source_hash}" >> ${GITHUB_ENV}
+          echo "status=success" >> ${GITHUB_OUTPUT}
+      - name: Cache ccache
+        uses: actions/cache@v5
+        with:
+          path: /builder/openwrt/.ccache
+          key: openwrt-${{ env.REPO_NAME }}-${{ env.source_hash }}
+          restore-keys: |
+            openwrt-${{ env.REPO_NAME }}-
+      - name: Compile OpenWrt firmware
+        id: compile
+        run: |
+          cd openwrt
+          echo "Compile with $(nproc) threads"
+          make -j$(( $(nproc) + 1 )) V=s || make -j1 V=s
+          ccache -s 2>/dev/null
+          echo "status=success" >> ${GITHUB_OUTPUT}
+      # ====================== 新增：收集所有ipk并打包为gz ======================
+      - name: Collect ipk packages and compress to tar.gz
+        id: collect_ipk
+        if: ${{ steps.compile.outputs.status == 'success' && !cancelled() }}
+        run: |
+          cd openwrt
+          mkdir -p output/ipk_bundle
+          # 复制全部编译输出的ipk包
+          find bin -name "*.ipk" -exec cp {} output/ipk_bundle/ \;
+          # 打包成压缩包
+          tar -zcvf output/openwrt-ipks.tar.gz -C output/ipk_bundle .
+          ls -lh output/
+          echo "status=success" >> ${GITHUB_OUTPUT}
+      # =======================================================================
+      - name: Clean build workspace
+        id: clean
+        if: ${{ steps.compile.outputs.status == 'success' && !cancelled() }}
+        run: |
+          cd openwrt
+          [[ -d "output" ]] || mkdir output
+          cp -f bin/targets/*/*/*-generic-rootfs.tar.gz output/
+          cp -f .config output/config
+          ls -A | grep -vE '^(output|\.ccache)$' | xargs rm -rf || true
+          df -hT ${PWD}
+          echo "status=success" >> ${GITHUB_OUTPUT}
+      - name: Upload OpenWrt rootfs + ipk bundle to Release
+        uses: ophub/upload-to-releases@main
+        if: ${{ steps.clean.outputs.status == 'success' && !cancelled() }}
+        with:
+          tag: ${{ env.build_tag }}
+          artifacts: openwrt/output/*
+          allow_updates: true
+          remove_artifacts: false
+          replaces_artifacts: true
+          make_latest: true
+          gh_token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Package OpenWrt for target boards
+        if: ${{ steps.clean.outputs.status == 'success' && !cancelled() }}
+        uses: ophub/amlogic-s9xxx-openwrt@main
+        with:
+          openwrt_path: openwrt/output/*rootfs.tar.gz
+          openwrt_ip: ${{ inputs.openwrt_ip }}
+          openwrt_board: ${{ inputs.openwrt_board }}
+          openwrt_kernel: ${{ inputs.openwrt_kernel }}
+          auto_kernel: ${{ inputs.auto_kernel }}
+          kernel_repo: ${{ inputs.kernel_repo }}
+          kernel_usage: ${{ inputs.kernel_usage }}
+          builder_name: ${{ inputs.builder_name }}
+      - name: Upload packaged OpenWrt to Release
+        uses: ophub/upload-to-releases@main
+        if: ${{ env.PACKAGED_STATUS == 'success' && !cancelled() }}
+        with:
+          tag: ${{ env.build_tag }}
+          artifacts: ${{ env.PACKAGED_OUTPUTPATH }}/*
+          allow_updates: true
+          remove_artifacts: false
+          replaces_artifacts: true
+          make_latest: true
+          gh_token: ${{ secrets.GITHUB_TOKEN }}
+          body: |
+            ### OpenWrt Image Information
+            - Default IP: `192.168.1.1`
+            - Default username: `root`
+            - Default password: `password`
+            - Default WIFI name: `OpenWrt`
+            - Default WIFI password: `none`
+            ### Install to EMMC
+            - Login to OpenWrt → `System` → `Amlogic Service` → `Install OpenWrt`
+            ### OpenWrt source code
+            - [${{ env.REPO_NAME }}](${{ env.REPO_URL }}/tree/${{ env.REPO_BRANCH }})
+            ### Applicable Platform
+            - 🐧 `arm64`
+            - 📦 IPK packages bundle: `openwrt-ipks.tar.gz`
+            - 🐋 Docker image: https://hub.docker.com/u/ophub
