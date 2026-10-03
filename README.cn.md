@@ -12,8 +12,8 @@
 
 ## OpenWrt 固件默认信息
 
-| 系统名称        | 默认账号 | 默认密码  | SSH 端口 | IP 地址 |
-| -------------- | ------- | ------- | ------- | ------- |
+| 系统名称 | 默认账号 | 默认密码 | SSH 端口 | IP 地址 |
+| -------- | -------- | -------- | -------- | ------- |
 | 🛜 [OpenWrt.OS](https://github.com/ophub/amlogic-s9xxx-openwrt/releases) | root | password | 22 | 192.168.1.1 |
 | 🐋 [OpenWrt.Docker](https://hub.docker.com/u/ophub) | root | password | 22 | 192.168.1.1 |
 
@@ -21,8 +21,8 @@
 
 ⬆️ 各平台（晶晨/瑞芯微/全志）型号均按 SoC 性能由高至低排列。
 
-| SoC  | [设备](https://github.com/ophub/amlogic-s9xxx-openwrt/releases) | [内核](https://github.com/ophub/kernel) |
-| ---- | ---- | ---- |
+| SoC | [设备](https://github.com/ophub/amlogic-s9xxx-openwrt/releases) | [内核](https://github.com/ophub/kernel) |
+| --- | ------ | ------ |
 | a311d | [Khadas-VIM3](https://github.com/ophub/amlogic-s9xxx-openwrt/issues/99), [WXY-OES](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2666) | [stable](https://github.com/ophub/kernel/releases/tag/kernel_stable) |
 | s922x | [Beelink-GT-King](https://github.com/ophub/amlogic-s9xxx-armbian/issues/370), [Beelink-GT-King-Pro](https://github.com/ophub/amlogic-s9xxx-armbian/issues/707), [Ugoos-AM6-Plus](https://github.com/ophub/amlogic-s9xxx-openwrt/issues/464), [ODROID-N2](https://github.com/ophub/amlogic-s9xxx-openwrt/issues/201), [X88-King](https://github.com/ophub/amlogic-s9xxx-armbian/issues/988), [Ali-CT2000](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1150), [WXY-OES-Plus](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3029) | [stable](https://github.com/ophub/kernel/releases/tag/kernel_stable) |
 | s905x3 | [X96-Max+](https://github.com/ophub/amlogic-s9xxx-armbian/issues/351), [HK1-Box](https://github.com/ophub/amlogic-s9xxx-armbian/issues/414), [Vontar-X3](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1006), [H96-Max-X3](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1250), [Ugoos-X3](https://github.com/ophub/amlogic-s9xxx-armbian/issues/782), [TX3(QZ)](https://github.com/ophub/amlogic-s9xxx-armbian/issues/644), [TX3(BZ)](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1077), [X96-Air](https://github.com/ophub/amlogic-s9xxx-armbian/issues/366), [X96-Max+_A100](https://github.com/ophub/amlogic-s9xxx-armbian/issues/779), [A95X-F3-Air](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2282), [Tencent-Aurora-3Pro(s905x3-b)](https://github.com/ophub/amlogic-s9xxx-armbian/issues/506), [X96-Max+Q1](https://github.com/ophub/amlogic-s9xxx-armbian/issues/788), [X96-Max+100W](https://github.com/ophub/amlogic-s9xxx-armbian/issues/909), [X96-Max+_2101](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1086), [Infinity-B32](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1181), [Whale](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1166), [X88-Pro-X3](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1621), [X99-Max-Plus](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1621), [Transpeed-X3-Plus](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1621), [TOX1](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3441), [Khadas-VIM3L](https://github.com/ophub/amlogic-s9xxx-armbian/pull/3482) | [stable](https://github.com/ophub/kernel/releases/tag/kernel_stable) |
@@ -42,7 +42,7 @@
 | rk3588(s) | [Radxa-Rock5B](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1240), [Radxa-Rock5C](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2324), [Orange-Pi-5-Plus](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2400), [Orange-Pi-5-Pro](https://github.com/ophub/amlogic-s9xxx-armbian/pull/3518), [Orange-Pi-5-Ultra](https://github.com/ophub/fnnas/pull/589), [Beelink-IPC-R](https://github.com/ophub/amlogic-s9xxx-openwrt/issues/415), [HLink-H88K](https://github.com/ophub/amlogic-s9xxx-armbian/pull/1726), [HLink-H88K-V3](https://github.com/ophub/amlogic-s9xxx-armbian/pull/1726), [NanoPC-T6](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2453), [Smart-Am60](https://github.com/ophub/amlogic-s9xxx-armbian/pull/2817), [DC-A588](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2988), [Orangepi-5B](https://github.com/ophub/amlogic-s9xxx-armbian/pull/3052), [CM3588-NAS](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3306), [Rock-5-ITX](https://github.com/ophub/fnnas/issues/355), [LZ-D3588](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3328), [Boca-tcn100](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3437), [Boca-tcn200](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3461), [Firefly-ITX-3588J](https://github.com/ophub/fnnas/issues/194), [Indiedroid-Nova](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3499), [LubanCat-4](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3507), [Seewo-SV50](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3517), [EasePi-R2](https://github.com/ophub/amlogic-s9xxx-armbian/pull/3525), [BDY-G98](https://github.com/ophub/fnnas/issues/606), [Youyeetoo-YY3588](https://github.com/ophub/fnnas/issues/633), [Youyeetoo-R1-V3](https://github.com/ophub/fnnas/issues/633), [ELFboard-elf2](https://github.com/ophub/fnnas/issues/634) | [stable](https://github.com/ophub/kernel/releases/tag/kernel_stable)<br />[rk3588](https://github.com/ophub/kernel/releases/tag/kernel_rk3588) |
 | rk3576 | [NanoPi-m5](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3207), [LCKFB-Taishan-Pi-3M](https://github.com/ophub/amlogic-s9xxx-armbian/pull/3470), [reComputer-rk3576-Devkit](https://github.com/ophub/amlogic-s9xxx-armbian/pull/3588), [LubanCat-3](https://github.com/ophub/fnnas/issues/573) | [stable](https://github.com/ophub/kernel/releases/tag/kernel_stable)<br />[rk35xx](https://github.com/ophub/kernel/releases/tag/kernel_rk35xx) |
 | rk3399 | [EAIDK-610](https://github.com/ophub/amlogic-s9xxx-armbian/pull/991), [King3399](https://github.com/ophub/amlogic-s9xxx-armbian/pull/1080), [TN3399](https://github.com/ophub/amlogic-s9xxx-armbian/pull/1094), [Kylin3399](https://github.com/ophub/amlogic-s9xxx-armbian/pull/1132), [ZCube1-Max](https://github.com/ophub/amlogic-s9xxx-armbian/pull/1247), [CRRC](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1280), [SMART-AM40](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1317), [SW799](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1326), [ZYSJ](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1380), [DG-3399](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1492), [DLFR100](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1522), [Emb3531](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1549), [Leez-p710](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1609), [tvi3315a](https://github.com/ophub/amlogic-s9xxx-armbian/pull/1687), [xiaobao](https://github.com/ophub/amlogic-s9xxx-armbian/pull/1698), [Fine3399](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1790), [Firefly-RK3399](https://github.com/ophub/amlogic-s9xxx-openwrt/issues/491), [LX-R3S](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2026), [Hugsun-x99](https://github.com/ophub/amlogic-s9xxx-armbian/pull/2050), [Tb-ls3399](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2146), [Hisense-hs530r](https://github.com/ophub/amlogic-s9xxx-openwrt/issues/572), [Tpm312](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2403), [ZK-rk39a](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2446), [YSKJ](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2673), [Fmx1-Pro](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2691), [Fmx1-Pro-B](https://github.com/ophub/fnnas/issues/250), [Sv-33a6x](https://github.com/ophub/amlogic-s9xxx-openwrt/issues/748), [Sv-33a6x(VPU)](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3372), [AIO-3399B](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3185), [AIO-3399C](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3339), [AIO-3399C(AI)](https://github.com/ophub/fnnas/issues/108), [TaraM](https://github.com/ophub/u-boot/pull/28), [NanoPC-T4](https://github.com/ophub/u-boot/pull/30), [Firefly-Core-3399-JD4](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3354), [GEA-6319](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3383), [NanoPi-SOM-RK3399](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3573), [SZ3390](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3644), [H339PC](https://github.com/ophub/fnnas/issues/647) | [stable](https://github.com/ophub/kernel/releases/tag/kernel_stable)<br />[rk35xx](https://github.com/ophub/kernel/releases/tag/kernel_rk35xx) |
-| rk3568 | [FastRhino-R66S](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1061), [FastRhino-R68S](https://github.com/ophub/amlogic-s9xxx-armbian/issues/774), [Radxa-E25](https://wiki.radxa.com/Rock3/CM/CM3I/E25), [NanoPi-R5S](https://github.com/ophub/amlogic-s9xxx-armbian/pull/1217), [NanoPi-R5C](https://github.com/ophub/amlogic-s9xxx-armbian/pull/1217), [HLink-H66K](https://github.com/ophub/amlogic-s9xxx-armbian/pull/1726), [HLink-H68K](https://github.com/ophub/amlogic-s9xxx-armbian/pull/1726), [HLink-H69K](https://github.com/ophub/amlogic-s9xxx-armbian/pull/1726), [Seewo-sv21](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2017), [Mrkaio-m68s](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2155), [Swan1-w28](https://github.com/ophub/amlogic-s9xxx-armbian/pull/2407), [Ruisen-box](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2508), [DG-TN3568](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2661), [Alark35-3500](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2911), [MMBox-Anas3035](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2995), [Wocyber-A3](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2978), [Photonicat](https://github.com/ophub/amlogic-s9xxx-openwrt/pull/827), [NSY-G16-Plus](https://github.com/ophub/amlogic-s9xxx-openwrt/issues/845), [NSY-G68-Plus](https://github.com/ophub/amlogic-s9xxx-openwrt/issues/845), [BDY-G18-Pro](https://github.com/ophub/amlogic-s9xxx-openwrt/issues/847), [Gzpeite-P01](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3221), [LZ-D3568](https://github.com/ophub/amlogic-s9xxx-armbian/pull/3387), [LZ-K3568](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3304), [BDKJ-One](https://github.com/ophub/u-boot/pull/29), [Station-P2](https://github.com/ophub/fnnas/pull/350), [Lyt-t68m](https://github.com/ophub/fnnas/issues/435), [LubanCat-2](https://github.com/ophub/amlogic-s9xxx-armbian/pull/3488), [Rock-3B](https://github.com/ophub/amlogic-s9xxx-armbian/pull/3518), [EasePi-A2](https://github.com/ophub/amlogic-s9xxx-armbian/pull/3525), [Roceos-K40Pro](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3530), [DG-Nas-Lite](https://github.com/ophub/fnnas/issues/8), [Houzzkit-F1](https://github.com/ophub/amlogic-s9xxx-armbian/pull/3625), [Youyeetoo-YY3568](https://github.com/ophub/fnnas/issues/633) | [stable](https://github.com/ophub/kernel/releases/tag/kernel_stable)<br />[rk35xx](https://github.com/ophub/kernel/releases/tag/kernel_rk35xx) |
+| rk3568 | [FastRhino-R66S](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1061), [FastRhino-R68S](https://github.com/ophub/amlogic-s9xxx-armbian/issues/774), [Radxa-E25](https://wiki.radxa.com/Rock3/CM/CM3I/E25), [NanoPi-R5S](https://github.com/ophub/amlogic-s9xxx-armbian/pull/1217), [NanoPi-R5C](https://github.com/ophub/amlogic-s9xxx-armbian/pull/1217), [HLink-H66K](https://github.com/ophub/amlogic-s9xxx-armbian/pull/1726), [HLink-H68K](https://github.com/ophub/amlogic-s9xxx-armbian/pull/1726), [HLink-H69K](https://github.com/ophub/amlogic-s9xxx-armbian/pull/1726), [Seewo-sv21](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2017), [Mrkaio-m68s](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2155), [Swan1-w28](https://github.com/ophub/amlogic-s9xxx-armbian/pull/2407), [Ruisen-box](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2508), [DG-TN3568](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2661), [Alark35-3500](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2911), [MMBox-Anas3035](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2995), [Wocyber-A3](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2978), [Photonicat](https://github.com/ophub/amlogic-s9xxx-openwrt/pull/827), [NSY-G16-Plus](https://github.com/ophub/amlogic-s9xxx-openwrt/issues/845), [NSY-G68-Plus](https://github.com/ophub/amlogic-s9xxx-openwrt/issues/845), [BDY-G18-Pro](https://github.com/ophub/amlogic-s9xxx-openwrt/issues/847), [Gzpeite-P01](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3221), [LZ-D3568](https://github.com/ophub/amlogic-s9xxx-armbian/pull/3387), [LZ-K3568](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3304), [BDKJ-One](https://github.com/ophub/u-boot/pull/29), [Station-P2](https://github.com/ophub/fnnas/pull/350), [Lyt-t68m](https://github.com/ophub/fnnas/issues/435), [LubanCat-2](https://github.com/ophub/amlogic-s9xxx-armbian/pull/3488), [Rock-3B](https://github.com/ophub/amlogic-s9xxx-armbian/pull/3518), [EasePi-A2](https://github.com/ophub/amlogic-s9xxx-armbian/pull/3525), [Roceos-K40Pro](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3530), [DG-Nas-Lite](https://github.com/ophub/fnnas/issues/8), [Houzzkit-F1](https://github.com/ophub/amlogic-s9xxx-armbian/pull/3625), [Youyeetoo-YY3568](https://github.com/ophub/fnnas/issues/633), [DC_A568](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3407) | [stable](https://github.com/ophub/kernel/releases/tag/kernel_stable)<br />[rk35xx](https://github.com/ophub/kernel/releases/tag/kernel_rk35xx) |
 | rk3566 | [Panther-X2](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1319), [JP-TvBox](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1867), [LCKFB-Taishan-Pi](https://github.com/ophub/amlogic-s9xxx-armbian/pull/2538), [WXY-OEC-turbo-4g](https://github.com/ophub/amlogic-s9xxx-armbian/pull/2736), [Station-M2](https://github.com/ophub/amlogic-s9xxx-openwrt/issues/744), [Orange-Pi-3B](https://github.com/ophub/fnnas/issues/261), [X88Pro20](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3443), [LubanCat-1](https://github.com/ophub/amlogic-s9xxx-armbian/pull/3488), [Rock-3C](https://github.com/ophub/amlogic-s9xxx-armbian/pull/3521), [Inspur-MD1000](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3503) | [stable](https://github.com/ophub/kernel/releases/tag/kernel_stable)<br />[rk35xx](https://github.com/ophub/kernel/releases/tag/kernel_rk35xx) |
 | rk3528 | [HLink-H28K](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1726), [Radxa-E20C](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2324), [H96-Max-M2](https://github.com/ophub/amlogic-s9xxx-armbian/issues/2404), [HK1-Rbox-K8S](https://github.com/ophub/fnnas/issues/464), [HT2](https://github.com/ophub/fnnas/issues/464), [CD1000](https://github.com/ophub/amlogic-s9xxx-armbian/issues/3302), [P51(X88-Pro-13)](https://github.com/ophub/amlogic-s9xxx-armbian/pull/3597), [XingYiCloud](https://github.com/ophub/amlogic-s9xxx-openwrt/issues/958) | [stable](https://github.com/ophub/kernel/releases/tag/kernel_stable)<br />[rk35xx](https://github.com/ophub/kernel/releases/tag/kernel_rk35xx) |
 | rk3328 | [BeikeYun](https://github.com/ophub/amlogic-s9xxx-armbian/issues/852), [Chainedbox-L1-Pro](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1680), [Station-M1](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1313), [Bqeel-MVR9](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1313), [Renegade/Firefly](https://github.com/ophub/amlogic-s9xxx-armbian/issues/1861) | [stable](https://github.com/ophub/kernel/releases/tag/kernel_stable)<br />[rk35xx](https://github.com/ophub/kernel/releases/tag/kernel_rk35xx) |
@@ -61,23 +61,23 @@
 
 1. `Rockchip` 平台的安装方法请查看说明文档中的 [第 8 章节](https://github.com/ophub/amlogic-s9xxx-armbian/blob/main/documents/README.cn.md) 的介绍，和 Armbian 的安装方法相同。
 
-2. `Amlogic` 和 `Allwinner` 平台，使用 [Rufus](https://rufus.ie/) 或者 [balenaEtcher](https://www.balena.io/etcher/) 等工具将固件写入 USB 里，然后把写好固件的 USB 插入盒子。浏览器访问 OpenWrt 的 IP(例如 192.168.1.1) → `使用默认账户登录进入 OpenWrt` → `系统菜单` → `晶晨宝盒` → `安装 OpenWrt` ，在支持的设备下拉列表中选择你的盒子，点击 `安装 OpenWrt` 按钮进行安装。
+2. `Amlogic` 和 `Allwinner` 平台，使用 [Rufus](https://rufus.ie/) 或者 [balenaEtcher](https://www.balena.io/etcher/) 等工具将固件写入 USB 里，然后把写好固件的 USB 插入盒子。浏览器访问 OpenWrt 的 IP（例如 192.168.1.1）→ `使用默认账户登录进入 OpenWrt` → `系统菜单` → `晶晨宝盒` → `安装 OpenWrt`，在支持的设备下拉列表中选择你的盒子，点击 `安装 OpenWrt` 按钮进行安装。
 
 - ### 升级 OpenWrt 系统或内核
 
-浏览器访问 OpenWrt 的 IP(例如 192.168.1.1) →  `使用账户登录进入 OpenWrt` → `系统菜单` → `晶晨宝盒` → `手动上传更新 / 在线下载更新`
+浏览器访问 OpenWrt 的 IP（例如 192.168.1.1）→ `使用账户登录进入 OpenWrt` → `系统菜单` → `晶晨宝盒` → `手动上传更新 / 在线下载更新`
 
 如果选择 `手动上传更新` [OpenWrt 固件](https://github.com/ophub/amlogic-s9xxx-openwrt/releases)，可以上传编译好的 OpenWrt 固件压缩包，如 openwrt_xxx_k5.15.50.img.gz（推荐上传压缩包，系统会自动解压；若上传解压后的 xxx.img 格式文件，可能因文件过大而导致上传失败）。上传完成后，界面将显示 `更新固件` 操作按钮，点击即可更新。
 
-如果选择 `手动上传更新` [OpenWrt 内核](https://github.com/ophub/kernel/releases/tag/kernel_stable)，可以上传 `boot-xxx.tar.gz`、`dtb-xxx.tar.gz`、`modules-xxx.tar.gz` 这 3 个内核文件（其他内核文件无需上传，即使同时上传也不影响更新，系统可以准确识别所需的内核文件）。上传完成后，界面将显示 `更新内核` 操作按钮，点击即可更新。若内核更新失败导致系统无法启动，可以使用 `openwrt-kernel -s` 命令进行内核恢复，方法详见[内核恢复](documents/README.cn.md#9-升级-openwrt-系统或内核)
+如果选择 `手动上传更新` [OpenWrt 内核](https://github.com/ophub/kernel/releases/tag/kernel_stable)，可以上传 `boot-xxx.tar.gz`、`dtb-xxx.tar.gz`、`modules-xxx.tar.gz` 这 3 个内核文件（其他内核文件无需上传，即使同时上传也不影响更新，系统可以准确识别所需的内核文件）。上传完成后，界面将显示 `更新内核` 操作按钮，点击即可更新。若内核更新失败导致系统无法启动，可以使用 `openwrt-kernel -s` 命令进行内核恢复，方法详见[内核恢复](documents/README.cn.md#9-升级-openwrt-系统或内核)。
 
-如果选择 `在线下载更新` OpenWrt 固件或内核，系统将根据`插件设置`中的`固件下载地址`和`内核下载地址`进行下载。您可以自定义修改下载来源，具体操作方法详见 [luci-app-amlogic](https://github.com/ophub/luci-app-amlogic) 的编译与使用说明。
+如果选择 `在线下载更新` OpenWrt 固件或内核，系统将根据 `插件设置` 中的 `固件下载地址` 和 `内核下载地址` 进行下载。您可以自定义修改下载来源，具体操作方法详见 [luci-app-amlogic](https://github.com/ophub/luci-app-amlogic) 的编译与使用说明。
 
 - ### 为 OpenWrt 创建 swap
 
 如果您在使用 `docker` 等内存占用较大的应用时，发现当前盒子的内存不足，可以创建 `swap` 虚拟内存分区，将 `/mnt/*4` 磁盘空间的一定容量虚拟为内存使用。以下命令的输入参数单位为 `GB`，默认值为 `1`。
 
-浏览器访问 OpenWrt 的 IP(例如 192.168.1.1) → `使用默认账户登录进入 OpenWrt` → `系统菜单` → `TTYD 终端` → 输入命令
+浏览器访问 OpenWrt 的 IP（例如 192.168.1.1）→ `使用默认账户登录进入 OpenWrt` → `系统菜单` → `TTYD 终端` → 输入命令
 
 ```yaml
 openwrt-swap 1
@@ -87,7 +87,7 @@ openwrt-swap 1
 
 支持通过 `TF/SD/USB` 对盒子的 `EMMC` 分区进行备份与恢复。建议您在全新的盒子上安装 OpenWrt 系统之前，先备份盒子自带的安卓 TV 系统，以便日后需要恢复时使用。
 
-请从 `TF/SD/USB` 启动 OpenWrt 系统，浏览器访问 OpenWrt 的 IP(例如 192.168.1.1) → `使用默认账户登录进入 OpenWrt` → `系统菜单` → `TTYD 终端` → 输入命令
+请从 `TF/SD/USB` 启动 OpenWrt 系统，浏览器访问 OpenWrt 的 IP（例如 192.168.1.1）→ `使用默认账户登录进入 OpenWrt` → `系统菜单` → `TTYD 终端` → 输入命令
 
 ```yaml
 openwrt-ddbr
@@ -100,7 +100,7 @@ openwrt-ddbr
 
 - ### 控制 LED 显示
 
-浏览器访问 OpenWrt 的 IP(例如 192.168.1.1) → `使用默认账户登录进入 OpenWrt` → `系统菜单` → `TTYD 终端` → 输入命令
+浏览器访问 OpenWrt 的 IP（例如 192.168.1.1）→ `使用默认账户登录进入 OpenWrt` → `系统菜单` → `TTYD 终端` → 输入命令
 
 ```yaml
 openwrt-openvfd
@@ -116,7 +116,7 @@ openwrt-openvfd
 
 - ### 更多使用说明
 
-在使用 OpenWrt 的过程中，常见问题及解决方案详见 [使用文档](./documents/README.cn.md)
+在使用 OpenWrt 的过程中，常见问题及解决方案详见 [使用文档](./documents/README.cn.md)。
 
 ## 本地化打包
 1. Clone 仓库到本地 `git clone --depth 1 https://github.com/ophub/amlogic-s9xxx-openwrt.git`
@@ -136,35 +136,35 @@ sudo apt-get install -y $(cat make-openwrt/scripts/ubuntu2404-make-openwrt-depen
 
 - ### 本地化打包参数说明
 
-| 参数  | 含义       | 说明               |
-| ---- | ---------- | ----------------- |
-| -b   | Board      | 指定目标设备代号。您可以指定具体设备进行编译（如 `-b s905x3`），或使用下划线连接多个设备代号同批编译（如 `-b s905x3_s905d`）。本参数还支持通过特殊关键字进行批量编译：`all` 表示编译全部设备，`first50` 表示编译设备库中的前 50 个，`range50_100` 表示编译从第 51 个至第 100 个设备（`range100_150` 同理），`last20` 表示最后 20 个。此外，支持按硬件平台（`amlogic`、`rockchip`、`allwinner`）进行分类编译，直接输入平台名称即可编译对应的所有镜像，例如 `-b amlogic`；若在平台名称后附加数值，则可指定编译该平台列表中的特定范围，例如 `-b amlogic50` 表示编译 Amlogic 平台支持列表中的前 50 个设备，`-b amlogic50_100` 表示编译从第 51 个至第 100 个设备。具体的设备代号支持列表，请详见 [model_database.conf](make-openwrt/openwrt-files/common-files/etc/model_database.conf) 中的 `BOARD` 配置项。默认值：`all` |
-| -r   | KernelRepo | 指定 github.com 内核仓库的 `<owner>/<repo>`。默认值：`ophub/kernel` |
-| -u   | kernelUsage | 设置使用的内核的 `tags 后缀`，如 [stable](https://github.com/ophub/kernel/releases/tag/kernel_stable), [flippy](https://github.com/ophub/kernel/releases/tag/kernel_flippy), [beta](https://github.com/ophub/kernel/releases/tag/kernel_beta)。默认值：`stable` |
-| -k   | Kernel     | 指定 [kernel](https://github.com/ophub/kernel/releases/tag/kernel_stable) 名称，如 `-k 5.10.125`。多个内核使用 `_` 连接，如 `-k 5.10.125_5.15.50`。通过 `-k` 参数自由指定的内核版本仅对使用 `stable/flippy/beta` 的内核有效。其他内核系列如 [rk3588](https://github.com/ophub/kernel/releases/tag/kernel_rk3588) / [rk35xx](https://github.com/ophub/kernel/releases/tag/kernel_rk35xx) 等只能使用特定内核。  |
-| -a   | AutoKernel | 设置是否自动采用同系列最新版本内核。当为 `true` 时，将自动在内核库中查找在 `-k` 中指定的内核如 5.10.125 的同系列是否有更新的版本，如有 5.10.125 之后的最新版本时，将自动更换为最新版。设置为 `false` 时将编译指定版本内核。默认值：`true` |
-| -p   | IP       | 指定 OpenWrt 系统的默认 IP 地址，例如： `-p 10.1.1.1`。默认值：`192.168.1.1` |
-| -s   | Size       | 对系统的镜像分区大小进行设置，只设置 ROOTFS 分区大小时可以只指定一个数值，例如： `-s 1024`。需要同时设置 BOOTFS 和 ROOTFS 分区大小时，使用 / 对两个数值进行连接，例如： `-s 256/1024`。默认值：`256/1024` |
-| -n   | BuilderName | 设置 OpenWrt 系统构建者签名。设置签名时请勿包含空格。默认值：`无` |
+| 参数 | 含义 | 说明 |
+| ---- | ---- | ---- |
+| -b | Board | 指定目标设备代号。您可以指定具体设备进行编译（如 `-b s905x3`），或使用下划线连接多个设备代号同批编译（如 `-b s905x3_s905d`）。本参数还支持通过特殊关键字进行批量编译：`all` 表示编译全部设备，`first50` 表示编译设备库中的前 50 个，`range50_100` 表示编译从第 51 个至第 100 个设备（`range100_150` 同理），`last20` 表示最后 20 个。此外，支持按硬件平台（`amlogic`、`rockchip`、`allwinner`）进行分类编译，直接输入平台名称即可编译对应的所有镜像，例如 `-b amlogic`；若在平台名称后附加数值，则可指定编译该平台列表中的特定范围，例如 `-b amlogic50` 表示编译 Amlogic 平台支持列表中的前 50 个设备，`-b amlogic50_100` 表示编译从第 51 个至第 100 个设备。具体的设备代号支持列表，请详见 [model_database.conf](make-openwrt/openwrt-files/common-files/etc/model_database.conf) 中的 `BOARD` 配置项。默认值：`all` |
+| -r | KernelRepo | 指定 github.com 内核仓库的 `<owner>/<repo>`。默认值：`ophub/kernel` |
+| -u | kernelUsage | 设置使用的内核的 `tags 后缀`，如 [stable](https://github.com/ophub/kernel/releases/tag/kernel_stable), [flippy](https://github.com/ophub/kernel/releases/tag/kernel_flippy), [beta](https://github.com/ophub/kernel/releases/tag/kernel_beta)。默认值：`stable` |
+| -k | Kernel | 指定 [kernel](https://github.com/ophub/kernel/releases/tag/kernel_stable) 版本，如 `-k 5.10.125`。多个内核使用 `_` 连接，如 `-k 5.10.125_5.15.50`。通过 `-k` 参数自由指定的内核版本仅对使用 `stable/flippy/beta` 的内核有效。其他内核系列如 [rk3588](https://github.com/ophub/kernel/releases/tag/kernel_rk3588) / [rk35xx](https://github.com/ophub/kernel/releases/tag/kernel_rk35xx) 等只能使用特定内核。 |
+| -a | AutoKernel | 设置是否自动采用同系列最新版本内核。当为 `true` 时，将自动在内核库中查找在 `-k` 中指定的内核如 5.10.125 的同系列是否有更新的版本，如有 5.10.125 之后的最新版本时，将自动更换为最新版。设置为 `false` 时将编译指定版本内核。默认值：`true` |
+| -p | IP | 指定 OpenWrt 系统的默认 IP 地址，例如：`-p 10.1.1.1`。默认值：`192.168.1.1` |
+| -s | Size | 对系统的镜像分区大小进行设置，只设置 ROOTFS 分区大小时可以只指定一个数值，例如：`-s 1024`。需要同时设置 BOOTFS 和 ROOTFS 分区大小时，使用 / 对两个数值进行连接，例如：`-s 256/1024`。默认值：`256/1024` |
+| -n | BuilderName | 设置 OpenWrt 系统构建者签名。设置签名时请勿包含空格。默认值：`none` |
 
 - `sudo ./remake` : 使用默认配置，使用内核库中的最新内核包，对全部型号的电视盒子进行打包。
-- `sudo ./remake -b s905x3 -k 6.1.10` : 推荐使用. 使用默认配置进行相关内核打包。
+- `sudo ./remake -b s905x3 -k 6.1.10` : 推荐使用。使用默认配置进行相关内核打包。
 - `sudo ./remake -b s905x3 -k 6.1.y` : 使用默认配置进行相关内核打包，内核使用 6.1.y 系列的最新版。
 - `sudo ./remake -b s905x3_s905d -k 6.1.10_5.15.50` : 使用默认配置，进行多个内核同时打包。使用 `_` 进行多内核参数连接。
 - `sudo ./remake -b s905x3 -k 6.1.10 -s 1024` : 使用默认配置，指定一个内核，一个型号进行打包，固件大小设定为 1024 MiB。
-- `sudo ./remake -b s905x3_s905d`  使用默认配置，对多个型号的电视盒子进行全部内核打包, 使用 `_` 进行多型号连接。
-- `sudo ./remake -k 6.1.10_5.15.50` : 使用默认配置，指定多个内核，进行全部型号电视盒子进行打包, 内核包使用 `_` 进行连接。
-- `sudo ./remake -k 6.1.10_5.15.50 -a true` : 使用默认配置，指定多个内核，进行全部型号电视盒子进行打包, 内核包使用 `_` 进行连接。自动升级到同系列最新内核。
-- `sudo ./remake -s 1024 -k 6.1.10` : 使用默认配置，设置固件大小为 1024 MiB, 并指定内核为 6.1.10 ，对全部型号电视盒子进行打包。
+- `sudo ./remake -b s905x3_s905d` : 使用默认配置，对多个型号的电视盒子进行全部内核打包，使用 `_` 进行多型号连接。
+- `sudo ./remake -k 6.1.10_5.15.50` : 使用默认配置，指定多个内核，对全部型号的电视盒子进行打包，内核包使用 `_` 进行连接。
+- `sudo ./remake -k 6.1.10_5.15.50 -a true` : 使用默认配置，指定多个内核，对全部型号的电视盒子进行打包，内核包使用 `_` 进行连接。自动升级到同系列最新内核。
+- `sudo ./remake -s 1024 -k 6.1.10` : 使用默认配置，设置固件大小为 1024 MiB，并指定内核为 6.1.10，对全部型号的电视盒子进行打包。
 
 ## 使用 GitHub Actions 进行编译
 
 您可以通过修改 [config](config) 目录下的个性化固件配置文件以及 [.yml](.github/workflows) 文件，自定义并编译适合您的 OpenWrt 固件，固件可以上传至 github.com 的 `Actions` 和 `Releases` 等处。
 
 1. 您可以在 [使用文档](./documents/README.cn.md) 中查看个性化固件配置说明。编译流程控制文件为 [.yml](https://github.com/ophub/amlogic-s9xxx-openwrt/blob/main/.github/workflows/build-openwrt-system-image.yml)
-2. 全新编译：在 github.com 的 [Action](https://github.com/ophub/amlogic-s9xxx-openwrt/actions) 页面选择 ***`Build OpenWrt system image`***，点击 ***`Run workflow`*** 按钮进行固件一站式编译和打包。
+2. 全新编译：在 github.com 的 [Actions](https://github.com/ophub/amlogic-s9xxx-openwrt/actions) 页面选择 ***`Build OpenWrt system image`***，点击 ***`Run workflow`*** 按钮进行固件一站式编译和打包。
 3. 再次编译：如果 [Releases](https://github.com/ophub/amlogic-s9xxx-openwrt/releases) 中已有编译好的 `openwrt-armsr-armv8-generic-rootfs.tar.gz` 文件，且您只需重新制作其他不同 board 的盒子，可以跳过 OpenWrt 源码编译，直接使用 [build-openwrt-using-releases-files.yml](.github/workflows/build-openwrt-using-releases-files.yml) 进行二次制作。
-4. 更多支持：编译好的 `openwrt-armsr-armv8-generic-rootfs.tar.gz` 文件是制作各种不同 board 固件的通用文件，也适用于使用 [unifreq](https://github.com/unifreq/openwrt_packit) 的打包脚本制作 OpenWrt 固件。作为在盒子中使用 OpenWrt 和 Armbian 系统的开创者，他支持了更多设备，包括在 [Armbian](https://github.com/ophub/amlogic-s9xxx-armbian) 系统中通过 `KVM` 虚拟机使用的 OpenWrt（[QEMU 版](https://github.com/unifreq/openwrt_packit/blob/master/files/qemu-aarch64/qemu-aarch64-readme.md)）、Amlogic、Rockchip 以及 Allwinner 系列等。打包方法详见其仓库说明，在 Actions 中可通过 [build-openwrt-using-unifreq-scripts.yml](.github/workflows/build-openwrt-using-unifreq-scripts.yml) 调用其打包脚本制作更多固件。
+4. 更多支持：编译好的 `openwrt-armsr-armv8-generic-rootfs.tar.gz` 文件是制作各种不同 board 固件的通用文件，也适用于使用 [unifreq](https://github.com/unifreq/openwrt_packit) 的打包脚本制作 OpenWrt 固件。作为在盒子中使用 OpenWrt 和 Armbian 系统的开创者，他支持了更多设备，包括在 [Armbian](https://github.com/ophub/amlogic-s9xxx-armbian) 系统中通过 `KVM` 虚拟机使用的 OpenWrt（[QEMU 版](https://github.com/unifreq/openwrt_packit/blob/master/files/qemu-aarch64/qemu-aarch64-readme.md)）、Amlogic、Rockchip 以及 Allwinner 系列等设备。打包方法详见其仓库说明，在 Actions 中可通过 [build-openwrt-using-unifreq-scripts.yml](.github/workflows/build-openwrt-using-unifreq-scripts.yml) 调用其打包脚本制作更多固件。
 
 ```yaml
 - name: Package armsr-armv8 as OpenWrt
@@ -178,31 +178,30 @@ sudo apt-get install -y $(cat make-openwrt/scripts/ubuntu2404-make-openwrt-depen
 
 - ### GitHub Actions 输入参数说明
 
-相关参数与`本地打包命令`相对应，请参考上面的说明。
+相关参数与 `本地打包命令` 相对应，请参考上面的说明。
 
-| 参数               | 默认值             | 说明                                      |
-|-------------------|-------------------|-------------------------------------------|
-| openwrt_path      | 无                | 设置 `openwrt-armsr-armv8-generic-rootfs.tar.gz` 的文件路径，可以使用相对路径如 `openwrt/bin/targets/*/*/*rootfs.tar.gz` 或网络文件下载地址如 `https://github.com/*/releases/*/*rootfs.tar.gz` |
-| openwrt_board     | all               | 设置打包盒子的 `board` ，功能参考 `-b` |
-| kernel_repo       | ophub/kernel      | 指定 github.com 内核仓库的 `<owner>/<repo>`，功能参考 `-r` |
-| kernel_usage      | stable            | 设置使用的内核的 `tags 后缀`。功能参考 `-u` |
-| openwrt_kernel    | 6.12.y_6.18.y     | 设置内核版本，功能参考 `-k` |
-| auto_kernel       | true              | 设置是否自动采用同系列最新版本内核。功能参考 `-a` |
-| openwrt_ip        | 192.168.1.1       | 设置 OpenWrt 系统的默认 IP 地址，功能参考 `-p` |
-| openwrt_size      | 256/1024          | 设置系统 BOOTFS 和 ROOTFS 分区的大小，功能参考 `-s` |
-| openwrt_files     | false             | 添加自定义 OpenWrt 文件。设置后，该目录下的所有文件将被复制到 [common-files](make-openwrt/openwrt-files/common-files) 中。目录结构必须与 OpenWrt 根目录保持一致，以确保文件被正确覆盖到固件中（例如：默认配置文件应存放于 `etc/config/` 子目录下）。 |
-| builder_name      | 无                | 设置 OpenWrt 系统构建者签名，功能参考 `-n`     |
-
+| 参数 | 默认值 | 说明 |
+| ---- | ---- | ---- |
+| openwrt_path | 无 | 设置 `openwrt-armsr-armv8-generic-rootfs.tar.gz` 的文件路径，可以使用相对路径如 `openwrt/bin/targets/*/*/*rootfs.tar.gz` 或网络文件下载地址如 `https://github.com/*/releases/*/*rootfs.tar.gz` |
+| openwrt_board | all | 设置打包盒子的 `board`，功能参考 `-b` |
+| kernel_repo | ophub/kernel | 指定 github.com 内核仓库的 `<owner>/<repo>`，功能参考 `-r` |
+| kernel_usage | stable | 设置使用的内核的 `tags 后缀`，功能参考 `-u` |
+| openwrt_kernel | 6.12.y_6.18.y | 设置内核版本，功能参考 `-k` |
+| auto_kernel | true | 设置是否自动采用同系列最新版本内核，功能参考 `-a` |
+| openwrt_ip | 192.168.1.1 | 设置 OpenWrt 系统的默认 IP 地址，功能参考 `-p` |
+| openwrt_size | 256/1024 | 设置系统 BOOTFS 和 ROOTFS 分区的大小，功能参考 `-s` |
+| openwrt_files | false | 添加自定义 OpenWrt 文件。设置后，该目录下的所有文件将被复制到 [common-files](make-openwrt/openwrt-files/common-files) 中。目录结构必须与 OpenWrt 根目录保持一致，以确保文件被正确覆盖到固件中（例如：默认配置文件应存放于 `etc/config/` 子目录下）。 |
+| builder_name | 无 | 设置 OpenWrt 系统构建者签名，功能参考 `-n` |
 
 - ### GitHub Actions 输出变量说明
 
 上传到 `Releases` 需要给仓库设置 `Workflow 读写权限`，详见[使用说明](./documents/README.cn.md#2-设置隐私变量-github_token)。
 
-| 参数                              | 默认值              | 说明                   |
-|----------------------------------|--------------------|------------------------|
-| ${{ env.PACKAGED_OUTPUTPATH }}   | out                | Armbian 系统文件输出路径  |
-| ${{ env.PACKAGED_OUTPUTDATE }}   | 04.13.1058         | 打包日期（月.日.时分）     |
-| ${{ env.PACKAGED_STATUS }}       | success / failure  | 打包状态。成功 / 失败     |
+| 参数 | 默认值 | 说明 |
+| ---- | ---- | ---- |
+| ${{ env.PACKAGED_OUTPUTPATH }} | out | OpenWrt 系统文件输出路径 |
+| ${{ env.PACKAGED_OUTPUTDATE }} | 04.13.1058 | 打包日期（月.日.时分） |
+| ${{ env.PACKAGED_STATUS }} | success / failure | 打包状态：成功 / 失败 |
 
 ## openwrt-*-rootfs.tar.gz 用于打包的文件编译选项
 
@@ -213,11 +212,11 @@ sudo apt-get install -y $(cat make-openwrt/scripts/ubuntu2404-make-openwrt-depen
 | Target Profile | Generic EFI Boot |
 | Target Images | tar.gz |
 
-更多信息请查阅 [使用文档](./documents/README.cn.md)
+更多信息请查阅 [使用文档](./documents/README.cn.md)。
 
 ## 编译内核
 
-内核的编译方法详见 [compile-kernel](https://github.com/ophub/amlogic-s9xxx-armbian/tree/main/compile-kernel)
+内核的编译方法详见 [compile-kernel](https://github.com/ophub/amlogic-s9xxx-armbian/tree/main/compile-kernel)。
 
 ```yaml
 - name: Compile the kernel
@@ -241,7 +240,7 @@ sudo apt-get install -y $(cat make-openwrt/scripts/ubuntu2404-make-openwrt-depen
 - [amlogic-s9xxx-armbian](https://github.com/ophub/amlogic-s9xxx-armbian) 项目提供了适用于盒子的 `Armbian` 系统，同样兼容支持 OpenWrt 的相关设备。
 - [fnnas](https://github.com/ophub/fnnas) 项目提供了适用于盒子的 `FnNAS` 系统，同样兼容支持 OpenWrt 的相关设备。
 
-## 链接
+## 相关链接
 
 - [unifreq](https://github.com/unifreq/openwrt_packit)
 - [OpenWrt](https://github.com/openwrt/openwrt)
@@ -250,4 +249,4 @@ sudo apt-get install -y $(cat make-openwrt/scripts/ubuntu2404-make-openwrt-depen
 
 ## License
 
-The amlogic-s9xxx-openwrt © OPHUB is licensed under [GPL-2.0](https://github.com/ophub/amlogic-s9xxx-openwrt/blob/main/LICENSE)
+amlogic-s9xxx-openwrt © OPHUB is licensed under [GPL-2.0](https://github.com/ophub/amlogic-s9xxx-openwrt/blob/main/LICENSE)

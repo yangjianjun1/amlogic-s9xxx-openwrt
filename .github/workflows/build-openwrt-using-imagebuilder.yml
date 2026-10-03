@@ -20,7 +20,7 @@ on:
         options:
           - openwrt:25.12.5
           - openwrt:24.10.8
-          - immortalwrt:25.12.1
+          - immortalwrt:25.12.2
           - immortalwrt:24.10.6
       openwrt_board:
         description: "Select device board"
@@ -133,6 +133,7 @@ on:
           - painet-p5
           - panther-x2
           - photonicat
+          - quarkpi-ca2
           - r66s
           - r68s
           - recomputer-rk3576-devkit
@@ -270,6 +271,7 @@ on:
           - yskj
           - zcube1-max
           - zk-r39a
+          - ztl-a568
           - zysj
       openwrt_kernel:
         description: "Select kernel version"
