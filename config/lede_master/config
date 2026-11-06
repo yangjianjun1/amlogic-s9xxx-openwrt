@@ -3292,7 +3292,7 @@ CONFIG_ATH10K_LEDS=y
 # CONFIG_PACKAGE_kmod-ath10k-pci is not set
 # CONFIG_PACKAGE_kmod-ath10k-sdio is not set
 # CONFIG_PACKAGE_kmod-ath10k-smallbuffers is not set
-CONFIG_PACKAGE_kmod-ath11k is not set
+# CONFIG_PACKAGE_kmod-ath11k is not set
 # CONFIG_ATH11K_THERMAL is not set
 # CONFIG_ATH11K_MEM_PROFILE_1G is not set
 # CONFIG_ATH11K_MEM_PROFILE_512M is not set
