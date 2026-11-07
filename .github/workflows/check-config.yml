@@ -2,7 +2,7 @@ name: Lede Config Check & Fix
 on:
   push:
     paths:
-      - 'config.seed'
+      - 'config/lede_master/config.seed'
       - '.github/workflows/lede-config-check.yml'
   workflow_dispatch:
 
