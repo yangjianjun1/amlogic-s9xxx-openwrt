@@ -1,0 +1,52 @@
+name: Check & Fix OpenWrt .config
+
+on:
+  workflow_dispatch:        # 手动触发
+  push:
+    paths:
+      - '.config'
+      - 'config/**'
+  pull_request:
+    paths:
+      - '.config'
+      - 'config/**'
+
+jobs:
+  check-config:
+    runs-on: ubuntu-latest
+    container:
+      image: openwrt/sdk:latest    # 使用 OpenWrt SDK 容器，自带 make 和依赖
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Prepare build environment
+        run: |
+          ./scripts/feeds update -a
+          ./scripts/feeds install -a
+
+      - name: Run config check & auto-fix
+        id: check
+        run: |
+          chmod +x scripts/check_and_fix_config.sh
+          scripts/check_and_fix_config.sh
+
+      - name: Upload fixed .config (if changed)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: fixed-config
+          path: |
+            .config
+            .config.bak
+          retention-days: 7
+
+      - name: Commit fixed config (optional)
+        if: steps.check.outputs.fixed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .config
+          git commit -m "ci: auto-fix .config syntax errors" || echo "No changes to commit"
+          git push || echo "Push failed (check permissions)"
