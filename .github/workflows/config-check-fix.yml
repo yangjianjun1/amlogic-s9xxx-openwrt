@@ -1,0 +1,53 @@
+name: Config Check & Auto Fix
+on:
+  push:
+    paths:
+      - 'config.seed'
+      - '.github/workflows/config-check-fix.yml'
+  workflow_dispatch:
+
+jobs:
+  config_check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install build deps
+        run: |
+          sudo apt update
+          sudo apt install -y build-essential libncurses-dev git bison flex
+
+      - name: Clone OpenWrt
+        run: |
+          git clone https://github.com/openwrt/openwrt.git openwrt
+          cd openwrt
+          git checkout openwrt-24.10
+
+      - name: Feeds prepare
+        run: |
+          cd openwrt
+          ./scripts/feeds update -a
+          ./scripts/feeds install -a
+
+      - name: Load seed, auto fix & validate config
+        run: |
+          cd openwrt
+          # 自动把 seed 里 CRLF 转 LF（修复 ^M 导致 missing separator）
+          sed -i 's/\r//g' ../config.seed
+          cp ../config.seed .config
+          # defconfig：校验语法、清理坏行、补齐依赖
+          make defconfig
+          # 导出修复后的差异seed
+          ./scripts/diffconfig.sh > fixed.seed
+          echo "===== 原始seed vs 修复后seed ====="
+          diff -u ../config.seed fixed.seed || true
+        continue-on-error: false
+
+      - name: Upload fixed config files (always)
+        uses: actions/upload-artifact@v4
+        with:
+          name: config-result
+          path: |
+            openwrt/.config
+            openwrt/fixed.seed
