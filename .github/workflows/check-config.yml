@@ -23,7 +23,7 @@ jobs:
       - name: Clone OpenWrt source (lede)
         run: |
           # 克隆 lede 源码
-          git clone --depth=1 https://github.com/coolsnowwjf/lede.git openwrt-src
+          git clone --depth=1 https://github.com/coolsnowwolf/lede.git openwrt-src
           cd openwrt-src
           ./scripts/feeds update -a
           ./scripts/feeds install -a
