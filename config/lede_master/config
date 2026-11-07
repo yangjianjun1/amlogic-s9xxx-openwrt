@@ -3412,7 +3412,7 @@ CONFIG_BRCMFMAC_PCIE=y
 # CONFIG_PACKAGE_kmod-rtw88-8822be is not set
 # CONFIG_PACKAGE_kmod-rtw88-8822bu is not set
 # CONFIG_PACKAGE_kmod-rtw88-8822c is not set
-# CONFIG_PACKAGE_kmod-rtw88-8822ce is not set
+CONFIG_PACKAGE_kmod-rtw88-8822ce=y
 # CONFIG_PACKAGE_kmod-rtw88-8822cs is not set
 # CONFIG_PACKAGE_kmod-rtw88-8822cu is not set
 CONFIG_PACKAGE_kmod-rtw88-sdio is not set
