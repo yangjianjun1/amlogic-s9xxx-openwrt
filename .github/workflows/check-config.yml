@@ -24,10 +24,15 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
-      - name: Link config to root
+      - name: Link config to root (ensure .config exists)
         run: |
-          # OpenWrt make 只认根目录的 .config
+          if [ ! -f config/lede_master/1.config ]; then
+            echo "::error::config/lede_master/1.config not found!"
+            exit 1
+          fi
           cp config/lede_master/1.config .config
+          echo "✅ .config created from source"
+          ls -la .config
 
       - name: Run config check & auto-fix
         id: check
@@ -35,10 +40,21 @@ jobs:
           chmod +x scripts/check_and_fix_config.sh
           scripts/check_and_fix_config.sh
 
-      - name: Sync fixed config back
+      - name: Sync fixed config back (safe copy)
         if: always()
         run: |
-          cp .config config/lede_master/1.config
+          if [ -f .config ]; then
+            cp .config config/lede_master/1.config
+            echo "✅ Synced .config back to config/lede_master/1.config"
+          else
+            echo "::warning::.config does not exist, restoring from backup..."
+            if [ -f .config.bak ]; then
+              cp .config.bak config/lede_master/1.config
+              echo "✅ Restored from .config.bak"
+            else
+              echo "::error::No .config or backup found!"
+            fi
+          fi
 
       - name: Upload fixed config
         if: always()
@@ -47,7 +63,7 @@ jobs:
           name: fixed-config
           path: |
             config/lede_master/1.config
-            config/lede_master/1.config.bak
+            .config.bak
           retention-days: 7
 
       - name: Commit fixed config
