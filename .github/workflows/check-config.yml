@@ -1,21 +1,19 @@
 name: Check & Fix OpenWrt .config
 
 on:
-  workflow_dispatch:        # 手动触发
+  workflow_dispatch:
   push:
     paths:
-      - '.config'
       - 'config/**'
   pull_request:
     paths:
-      - '.config'
       - 'config/**'
 
 jobs:
   check-config:
     runs-on: ubuntu-latest
     container:
-      image: openwrt/sdk:latest    # 使用 OpenWrt SDK 容器，自带 make 和依赖
+      image: openwrt/sdk:latest
 
     steps:
       - name: Checkout code
@@ -26,27 +24,37 @@ jobs:
           ./scripts/feeds update -a
           ./scripts/feeds install -a
 
+      - name: Link config to root
+        run: |
+          # OpenWrt make 只认根目录的 .config
+          cp config/lede_master/1.config .config
+
       - name: Run config check & auto-fix
         id: check
         run: |
           chmod +x scripts/check_and_fix_config.sh
           scripts/check_and_fix_config.sh
 
-      - name: Upload fixed .config (if changed)
+      - name: Sync fixed config back
+        if: always()
+        run: |
+          cp .config config/lede_master/1.config
+
+      - name: Upload fixed config
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: fixed-config
           path: |
-            .config
-            .config.bak
+            config/lede_master/1.config
+            config/lede_master/1.config.bak
           retention-days: 7
 
-      - name: Commit fixed config (optional)
+      - name: Commit fixed config
         if: steps.check.outputs.fixed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add .config
-          git commit -m "ci: auto-fix .config syntax errors" || echo "No changes to commit"
-          git push || echo "Push failed (check permissions)"
+          git add config/lede_master/1.config
+          git commit -m "ci: auto-fix config/lede_master/1.config syntax errors" || echo "No changes"
+          git push || echo "Push failed"
