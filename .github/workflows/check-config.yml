@@ -27,7 +27,6 @@ jobs:
       - name: Clone Lede
         run: |
           git clone https://github.com/coolsnowwolf/lede.git lede
-          cd lede
 
       - name: Feeds update & install
         run: |
@@ -41,12 +40,32 @@ jobs:
           # 清理换行、全角空格、零宽字符
           sed -i 's/\r//g; s/　//g; s/\xE2\x80\x8B//g' ../config/lede_master/config.seed
           cp ../config/lede_master/config.seed .config
-          echo "==================== 报错附近行 5458 ~ 5464 ===================="
-          sed -n '5458,5464p' .config
+
+          echo "==================== 扫描 .config 中的语法错误 ===================="
+          ERR_LINES=$(grep -n '^CONFIG_[A-Za-z0-9_]*$' .config || true)
+          if [ -n "$ERR_LINES" ]; then
+            echo "❌ 发现以下不完整的配置行（缺少 =y 或 is not set）："
+            echo "$ERR_LINES"
+            echo "-------------------- 自动修复中 --------------------"
+            sed -i 's/^\(CONFIG_[A-Za-z0-9_]*\)$/\1=y/' .config
+            echo "✅ 已自动补全 =y"
+          else
+            echo "✅ 未发现缺失赋值的 CONFIG_ 行"
+          fi
           echo "=============================================================="
+
+          echo "==================== 运行 make defconfig ===================="
           make defconfig
+          DEFCONFIG_RC=$?
+          if [ $DEFCONFIG_RC -ne 0 ]; then
+            echo "❌ make defconfig 失败，退出码: $DEFCONFIG_RC"
+            exit $DEFCONFIG_RC
+          fi
+          echo "✅ make defconfig 通过"
+          echo "=============================================================="
+
           ./scripts/diffconfig.sh > fixed.seed
-          echo "====对比原始seed和修复后seed===="
+          echo "==== 对比原始 seed 和修复后 seed ===="
           diff -u ../config/lede_master/config.seed fixed.seed || true
 
       - name: Upload result
