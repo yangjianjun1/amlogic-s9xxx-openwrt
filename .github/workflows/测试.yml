@@ -335,7 +335,7 @@ env:
   CCACHE_DIR: /builder/openwrt/.ccache
 jobs:
   setup:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     outputs:
       matrix: ${{ steps.set-matrix.outputs.matrix }}
     steps:
