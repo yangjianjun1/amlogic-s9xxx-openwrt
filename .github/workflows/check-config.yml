@@ -38,9 +38,12 @@ jobs:
       - name: Load seed, validate and fix
         run: |
           cd lede
-          # 注意：seed 在仓库 config/lede_master/ 下面
-          sed -i 's/\r//g' ../config/lede_master/config.seed
+          # 清理换行、全角空格、零宽字符
+          sed -i 's/\r//g; s/　//g; s/\xE2\x80\x8B//g' ../config/lede_master/config.seed
           cp ../config/lede_master/config.seed .config
+          echo "==================== 报错附近行 5458 ~ 5464 ===================="
+          sed -n '5458,5464p' .config
+          echo "=============================================================="
           make defconfig
           ./scripts/diffconfig.sh > fixed.seed
           echo "====对比原始seed和修复后seed===="
