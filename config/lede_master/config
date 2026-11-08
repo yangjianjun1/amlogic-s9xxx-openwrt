@@ -96,42 +96,42 @@ CONFIG_DEFAULT_ipset=y
 CONFIG_DEFAULT_iptables=y
 CONFIG_DEFAULT_iptables-mod-extra=y
 CONFIG_DEFAULT_iptables-mod-tproxy=y
-CONFIG_DEFAULT_kmod-amazon-ena=y
-CONFIG_DEFAULT_kmod-atlantic=y
-CONFIG_DEFAULT_kmod-bcmgenet=y
-CONFIG_DEFAULT_kmod-dwmac-imx=y
-CONFIG_DEFAULT_kmod-dwmac-rockchip=y
-CONFIG_DEFAULT_kmod-dwmac-sun8i=y
-CONFIG_DEFAULT_kmod-e1000e=y
+# CONFIG_DEFAULT_kmod-amazon-ena is not set
+# CONFIG_DEFAULT_kmod-atlantic is not set
+# CONFIG_DEFAULT_kmod-bcmgenet is not set
+# CONFIG_DEFAULT_kmod-dwmac-imx is not set
+# CONFIG_DEFAULT_kmod-dwmac-rockchip is not set
+# CONFIG_DEFAULT_kmod-dwmac-sun8i is not set
+# CONFIG_DEFAULT_kmod-e1000e is not set
 CONFIG_DEFAULT_kmod-fs-vfat=y
-CONFIG_DEFAULT_kmod-fsl-dpaa1-net=y
-CONFIG_DEFAULT_kmod-fsl-dpaa2-net=y
-CONFIG_DEFAULT_kmod-fsl-enetc-net=y
-CONFIG_DEFAULT_kmod-fsl-fec=y
-CONFIG_DEFAULT_kmod-gpio-pca953x=y
-CONFIG_DEFAULT_kmod-i2c-mux-pca954x=y
+# CONFIG_DEFAULT_kmod-fsl-dpaa1-net is not set
+# CONFIG_DEFAULT_kmod-fsl-dpaa2-net is not set
+# CONFIG_DEFAULT_kmod-fsl-enetc-net is not set
+# CONFIG_DEFAULT_kmod-fsl-fec is not set
+# CONFIG_DEFAULT_kmod-gpio-pca953x is not set
+# CONFIG_DEFAULT_kmod-i2c-mux-pca954x is not set
 CONFIG_DEFAULT_kmod-ipt-nat6=y
 CONFIG_DEFAULT_kmod-ipt-raw=y
-CONFIG_DEFAULT_kmod-mvneta=y
-CONFIG_DEFAULT_kmod-mvpp2=y
+# CONFIG_DEFAULT_kmod-mvneta is not set
+# CONFIG_DEFAULT_kmod-mvpp2 is not set
 CONFIG_DEFAULT_kmod-nf-nathelper=y
 CONFIG_DEFAULT_kmod-nf-nathelper-extra=y
-CONFIG_DEFAULT_kmod-octeontx2-net=y
-CONFIG_DEFAULT_kmod-phy-aquantia=y
-CONFIG_DEFAULT_kmod-phy-broadcom=y
-CONFIG_DEFAULT_kmod-phy-marvell=y
-CONFIG_DEFAULT_kmod-phy-marvell-10g=y
+# CONFIG_DEFAULT_kmod-octeontx2-net is not set
+# CONFIG_DEFAULT_kmod-phy-aquantia is not set
+# CONFIG_DEFAULT_kmod-phy-broadcom is not set
+# CONFIG_DEFAULT_kmod-phy-marvell is not set
+# CONFIG_DEFAULT_kmod-phy-marvell-10g is not set
 CONFIG_DEFAULT_kmod-phy-realtek=y
-CONFIG_DEFAULT_kmod-phy-smsc=y
-CONFIG_DEFAULT_kmod-renesas-net-avb=y
-CONFIG_DEFAULT_kmod-rtc-rx8025=y
+# CONFIG_DEFAULT_kmod-phy-smsc is not set
+# CONFIG_DEFAULT_kmod-renesas-net-avb is not set
+# CONFIG_DEFAULT_kmod-rtc-rx8025 is not set
 CONFIG_DEFAULT_kmod-sched-bpf=y
 CONFIG_DEFAULT_kmod-sched-core=y
-CONFIG_DEFAULT_kmod-sfp=y
+# CONFIG_DEFAULT_kmod-sfp is not set
 CONFIG_DEFAULT_kmod-tun=y
 CONFIG_DEFAULT_kmod-veth=y
-CONFIG_DEFAULT_kmod-vmxnet3=y
-CONFIG_DEFAULT_kmod-wdt-sp805=y
+# CONFIG_DEFAULT_kmod-vmxnet3 is not set
+# CONFIG_DEFAULT_kmod-wdt-sp805 is not set
 CONFIG_DEFAULT_kmod-xdp-sockets-diag=y
 CONFIG_DEFAULT_libc=y
 CONFIG_DEFAULT_libgcc=y
@@ -2052,7 +2052,7 @@ CONFIG_PACKAGE_libiwinfo-data=y
 # CONFIG_PACKAGE_ath12k-firmware-qcn9274 is not set
 # CONFIG_PACKAGE_ath12k-firmware-wcn7850 is not set
 # CONFIG_PACKAGE_ath6k-firmware is not set
-CONFIG_PACKAGE_ath9k-htc-firmware=y
+# CONFIG_PACKAGE_ath9k-htc-firmware is not set
 # CONFIG_PACKAGE_bnx2-firmware is not set
 # CONFIG_PACKAGE_bnx2x-firmware is not set
 # CONFIG_PACKAGE_brcmfmac-firmware-4329-sdio is not set
@@ -2064,7 +2064,7 @@ CONFIG_PACKAGE_ath9k-htc-firmware=y
 # CONFIG_PACKAGE_brcmfmac-firmware-4366b1-pcie is not set
 # CONFIG_PACKAGE_brcmfmac-firmware-4366c0-pcie is not set
 # CONFIG_PACKAGE_brcmfmac-firmware-43752-sdio is not set
-CONFIG_PACKAGE_brcmfmac-firmware-usb=y
+# CONFIG_PACKAGE_brcmfmac-firmware-usb is not set
 # CONFIG_PACKAGE_brcmfmac-nvram-43430-sdio is not set
 # CONFIG_PACKAGE_brcmfmac-nvram-43430b0-sdio is not set
 # CONFIG_PACKAGE_brcmfmac-nvram-43455-sdio is not set
@@ -2411,7 +2411,7 @@ CONFIG_PACKAGE_kmod-fuse=y
 CONFIG_PACKAGE_kmod-gpio-button-hotplug=y
 # CONFIG_PACKAGE_kmod-gpio-cascade is not set
 # CONFIG_PACKAGE_kmod-gpio-nxp-74hc164 is not set
-CONFIG_PACKAGE_kmod-gpio-pca953x=y
+#CONFIG_PACKAGE_kmod-gpio-pca953x is not set
 # CONFIG_PACKAGE_kmod-gpio-pcf857x is not set
 # end of GPIO support
 
@@ -2476,7 +2476,7 @@ CONFIG_PACKAGE_kmod-i2c-core=y
 CONFIG_PACKAGE_kmod-i2c-mux=y
 # CONFIG_PACKAGE_kmod-i2c-mux-gpio is not set
 # CONFIG_PACKAGE_kmod-i2c-mux-pca9541 is not set
-CONFIG_PACKAGE_kmod-i2c-mux-pca954x=y
+# CONFIG_PACKAGE_kmod-i2c-mux-pca954x is not set
 # CONFIG_PACKAGE_kmod-i2c-mux-reg is not set
 # CONFIG_PACKAGE_kmod-i2c-pxa is not set
 # CONFIG_PACKAGE_kmod-i2c-smbus is not set
@@ -2752,14 +2752,14 @@ CONFIG_PACKAGE_kmod-nft-tproxy=y
 # CONFIG_PACKAGE_kmod-8139too is not set
 CONFIG_PACKAGE_kmod-acpi-mdio=y
 # CONFIG_PACKAGE_kmod-alx is not set
-CONFIG_PACKAGE_kmod-amazon-ena=y
+# CONFIG_PACKAGE_kmod-amazon-ena is not set
 # CONFIG_PACKAGE_kmod-atl1 is not set
 # CONFIG_PACKAGE_kmod-atl1c is not set
 # CONFIG_PACKAGE_kmod-atl1e is not set
 # CONFIG_PACKAGE_kmod-atl2 is not set
-CONFIG_PACKAGE_kmod-atlantic=y
+# CONFIG_PACKAGE_kmod-atlantic is not set
 # CONFIG_PACKAGE_kmod-b44 is not set
-CONFIG_PACKAGE_kmod-bcmgenet=y
+# CONFIG_PACKAGE_kmod-bcmgenet is not set
 # CONFIG_PACKAGE_kmod-be2net is not set
 # CONFIG_PACKAGE_kmod-bnx2 is not set
 # CONFIG_PACKAGE_kmod-bnx2x is not set
@@ -2773,25 +2773,25 @@ CONFIG_PACKAGE_kmod-bcmgenet=y
 # CONFIG_PACKAGE_kmod-dsa-rtl8365mb is not set
 # CONFIG_PACKAGE_kmod-dsa-rtl8366rb is not set
 # CONFIG_PACKAGE_kmod-dsa-yt921x is not set
-CONFIG_PACKAGE_kmod-dummy=y
-CONFIG_PACKAGE_kmod-dwmac-imx=y
+# CONFIG_PACKAGE_kmod-dummy is not set
+# CONFIG_PACKAGE_kmod-dwmac-imx is not set
 # CONFIG_PACKAGE_kmod-dwmac-renesas-gbeth is not set
-CONFIG_PACKAGE_kmod-dwmac-rockchip=y
+# CONFIG_PACKAGE_kmod-dwmac-rockchip is not set
 # CONFIG_PACKAGE_kmod-dwmac-sun55i is not set
-CONFIG_PACKAGE_kmod-dwmac-sun8i=y
+# CONFIG_PACKAGE_kmod-dwmac-sun8i is not set
 # CONFIG_PACKAGE_kmod-e100 is not set
 # CONFIG_PACKAGE_kmod-e1000 is not set
-CONFIG_PACKAGE_kmod-e1000e=y
+# CONFIG_PACKAGE_kmod-e1000e is not set
 # CONFIG_PACKAGE_kmod-et131x is not set
 # CONFIG_PACKAGE_kmod-ethoc is not set
 CONFIG_PACKAGE_kmod-fixed-phy=y
 # CONFIG_PACKAGE_kmod-forcedeth is not set
-CONFIG_PACKAGE_kmod-fsl-dpaa1-net=y
-CONFIG_PACKAGE_kmod-fsl-dpaa2-net=y
-CONFIG_PACKAGE_kmod-fsl-enetc-net=y
-CONFIG_PACKAGE_kmod-fsl-fec=y
-CONFIG_PACKAGE_kmod-fsl-pcs-lynx=y
-CONFIG_PACKAGE_kmod-fsl-xgmac-mdio=y
+# CONFIG_PACKAGE_kmod-fsl-dpaa1-net is not set
+# CONFIG_PACKAGE_kmod-fsl-dpaa2-net is not set
+# CONFIG_PACKAGE_kmod-fsl-enetc-net is not set
+# CONFIG_PACKAGE_kmod-fsl-fec is not set
+# CONFIG_PACKAGE_kmod-fsl-pcs-lynx is not set
+# CONFIG_PACKAGE_kmod-fsl-xgmac-mdio is not set
 # CONFIG_PACKAGE_kmod-hfcmulti is not set
 # CONFIG_PACKAGE_kmod-hfcpci is not set
 # CONFIG_PACKAGE_kmod-hinic3 is not set
@@ -2820,35 +2820,35 @@ CONFIG_PACKAGE_kmod-mii=y
 # CONFIG_PACKAGE_kmod-mlx5-core is not set
 # CONFIG_PACKAGE_kmod-mlxfw is not set
 # CONFIG_PACKAGE_kmod-mtk-t7xx is not set
-CONFIG_PACKAGE_kmod-mvneta=y
-CONFIG_PACKAGE_kmod-mvpp2=y
+# CONFIG_PACKAGE_kmod-mvneta is not set
+# CONFIG_PACKAGE_kmod-mvpp2 is not set
 # CONFIG_PACKAGE_kmod-natsemi is not set
 # CONFIG_PACKAGE_kmod-ne2k-pci is not set
 CONFIG_PACKAGE_kmod-net-selftests=y
 # CONFIG_PACKAGE_kmod-niu is not set
-CONFIG_PACKAGE_kmod-octeontx2-net=y
+# CONFIG_PACKAGE_kmod-octeontx2-net is not set
 CONFIG_PACKAGE_kmod-of-mdio=y
 # CONFIG_PACKAGE_kmod-pcnet32 is not set
 CONFIG_PACKAGE_kmod-pcs-xpcs=y
 # CONFIG_PACKAGE_kmod-phy-aeonsemi-as21xxx is not set
 # CONFIG_PACKAGE_kmod-phy-airoha-en8811h is not set
 # CONFIG_PACKAGE_kmod-phy-amd is not set
-CONFIG_PACKAGE_kmod-phy-aquantia=y
+# CONFIG_PACKAGE_kmod-phy-aquantia is not set
 # CONFIG_PACKAGE_kmod-phy-at803x is not set
 # CONFIG_PACKAGE_kmod-phy-ax88796b is not set
 CONFIG_PACKAGE_kmod-phy-bcm7xxx=y
 # CONFIG_PACKAGE_kmod-phy-bcm84881 is not set
-CONFIG_PACKAGE_kmod-phy-broadcom=y
+# CONFIG_PACKAGE_kmod-phy-broadcom is not set
 # CONFIG_PACKAGE_kmod-phy-intel-xway is not set
-CONFIG_PACKAGE_kmod-phy-marvell=y
-CONFIG_PACKAGE_kmod-phy-marvell-10g=y
+# CONFIG_PACKAGE_kmod-phy-marvell is not set
+# CONFIG_PACKAGE_kmod-phy-marvell-10g is not set
 # CONFIG_PACKAGE_kmod-phy-maxlinear is not set
 # CONFIG_PACKAGE_kmod-phy-micrel is not set
 # CONFIG_PACKAGE_kmod-phy-microchip is not set
 # CONFIG_PACKAGE_kmod-phy-motorcomm is not set
 # CONFIG_PACKAGE_kmod-phy-qca83xx is not set
 CONFIG_PACKAGE_kmod-phy-realtek=y
-CONFIG_PACKAGE_kmod-phy-smsc=y
+# CONFIG_PACKAGE_kmod-phy-smsc is not set
 # CONFIG_PACKAGE_kmod-phy-vitesse is not set
 CONFIG_PACKAGE_kmod-phylib-broadcom=y
 CONFIG_PACKAGE_kmod-phylink=y
@@ -2866,13 +2866,13 @@ CONFIG_PACKAGE_kmod-phylink=y
 # CONFIG_PACKAGE_kmod-r8168 is not set
 # CONFIG_PACKAGE_kmod-r8168-rss is not set
 # CONFIG_PACKAGE_kmod-r8169 is not set
-CONFIG_PACKAGE_kmod-renesas-net-avb=y
+# CONFIG_PACKAGE_kmod-renesas-net-avb is not set
 # CONFIG_PACKAGE_kmod-renesas-rzn-pcs is not set
 # CONFIG_PACKAGE_kmod-rmnet is not set
 # CONFIG_PACKAGE_kmod-sfc is not set
 # CONFIG_PACKAGE_kmod-sfc-falcon is not set
 # CONFIG_PACKAGE_kmod-sfc-siena is not set
-CONFIG_PACKAGE_kmod-sfp=y
+# CONFIG_PACKAGE_kmod-sfp is not set
 # CONFIG_PACKAGE_kmod-siit is not set
 # CONFIG_PACKAGE_kmod-sis190 is not set
 # CONFIG_PACKAGE_kmod-sis900 is not set
@@ -2897,7 +2897,7 @@ CONFIG_PACKAGE_kmod-thunderx-net=y
 # CONFIG_PACKAGE_kmod-tulip is not set
 # CONFIG_PACKAGE_kmod-via-rhine is not set
 # CONFIG_PACKAGE_kmod-via-velocity is not set
-CONFIG_PACKAGE_kmod-vmxnet3=y
+# CONFIG_PACKAGE_kmod-vmxnet3 is not set
 # CONFIG_PACKAGE_kmod-wwan is not set
 # CONFIG_PACKAGE_kmod-yt6801 is not set
 # end of Network Devices
@@ -3068,7 +3068,7 @@ CONFIG_PACKAGE_kmod-thermal=y
 # CONFIG_PACKAGE_kmod-tpm-i2c-infineon is not set
 # CONFIG_PACKAGE_kmod-tpm-tis is not set
 # CONFIG_PACKAGE_kmod-tpm-tis-spi is not set
-CONFIG_PACKAGE_kmod-wdt-sp805=y
+# CONFIG_PACKAGE_kmod-wdt-sp805 is not set
 CONFIG_PACKAGE_kmod-zram=y
 # end of Other modules
 
@@ -3092,7 +3092,7 @@ CONFIG_PACKAGE_kmod-zram=y
 # CONFIG_PACKAGE_kmod-rtc-pcf8563 is not set
 # CONFIG_PACKAGE_kmod-rtc-r7301 is not set
 # CONFIG_PACKAGE_kmod-rtc-rs5c372a is not set
-CONFIG_PACKAGE_kmod-rtc-rx8025=y
+# CONFIG_PACKAGE_kmod-rtc-rx8025 is not set
 # CONFIG_PACKAGE_kmod-rtc-s35390a is not set
 # CONFIG_PACKAGE_kmod-rtc-x1205 is not set
 # end of RTC Real-Time Clock Support
@@ -5423,7 +5423,7 @@ CONFIG_PACKAGE_luci-app-amlogic=y
 # CONFIG_PACKAGE_luci-app-appfilter is not set
 # CONFIG_PACKAGE_luci-app-argon-config is not set
 # CONFIG_PACKAGE_luci-app-aria2 is not set
-CONFIG_PACKAGE_luci-app-arpbind=y
+# CONFIG_PACKAGE_luci-app-arpbind is not set
 # CONFIG_PACKAGE_luci-app-attendedsysupgrade is not set
 # CONFIG_PACKAGE_luci-app-autoreboot is not set
 # CONFIG_PACKAGE_luci-app-babeld is not set
@@ -5466,7 +5466,7 @@ CONFIG_PACKAGE_luci-app-dockerman=y
 # CONFIG_PACKAGE_luci-app-filebrowser is not set
 CONFIG_PACKAGE_luci-app-filebrowser-go=y
 # CONFIG_PACKAGE_luci-app-filemanager is not set
-CONFIG_PACKAGE_luci-app-filetransfer=y
+# CONFIG_PACKAGE_luci-app-filetransfer is not set
 CONFIG_PACKAGE_luci-app-firewall=y
 # CONFIG_PACKAGE_luci-app-fogvdn is not set
 # CONFIG_PACKAGE_luci-app-frpc is not set
@@ -5561,26 +5561,26 @@ CONFIG_PACKAGE_luci-app-package-manager=y
 # CONFIG_PACKAGE_luci-app-sqm is not set
 # CONFIG_PACKAGE_luci-app-squid is not set
 # CONFIG_PACKAGE_luci-app-sshtunnel is not set
-CONFIG_PACKAGE_luci-app-ssr-plus=y
-CONFIG_PACKAGE_luci-app-ssr-plus_Iptables_Transparent_Proxy=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_NONE_Client=y
+# CONFIG_PACKAGE_luci-app-ssr-plus is not set
+# CONFIG_PACKAGE_luci-app-ssr-plus_Iptables_Transparent_Proxy is not set
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_NONE_Client is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Client is not set
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_NONE_Server=y
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_NONE_Server is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Rust_Server is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NONE_V2RAY is not set
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ChinaDNS_NG=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_MosDNS=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Http_Proxy=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Mihomo=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_GeoData=y
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Xray is not set
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ChinaDNS_NG is not set
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_MosDNS is not set
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Http_Proxy is not set
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Mihomo is not set=y
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_GeoData is not set=y
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadow_TLS is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_NaiveProxy is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_Simple_Obfs is not set
 # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Shadowsocks_V2ray_Plugin is not set
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Client=y
-CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Server=y
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Client is not set
+# CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Libev_Server is not set
 # CONFIG_PACKAGE_luci-app-statistics is not set
 # CONFIG_PACKAGE_luci-app-syncdial is not set
 # CONFIG_PACKAGE_luci-app-syncthing is not set
@@ -5603,14 +5603,14 @@ CONFIG_PACKAGE_luci-app-upnp=y
 # CONFIG_PACKAGE_luci-app-usteer is not set
 # CONFIG_PACKAGE_luci-app-uugamebooster is not set
 # CONFIG_PACKAGE_luci-app-v2raya is not set
-CONFIG_PACKAGE_luci-app-vlmcsd=y
+# CONFIG_PACKAGE_luci-app-vlmcsd is not set
 # CONFIG_PACKAGE_luci-app-vnstat2 is not set
-# CONFIG_PACKAGE_luci-app-vsftpd is not set
+CONFIG_PACKAGE_luci-app-vsftpd=y
 # CONFIG_PACKAGE_luci-app-watchcat is not set
 # CONFIG_PACKAGE_luci-app-wechatpush is not set
 # CONFIG_PACKAGE_luci-app-wifihistory is not set
 # CONFIG_PACKAGE_luci-app-wifischedule is not set
-CONFIG_PACKAGE_luci-app-wol=y
+# CONFIG_PACKAGE_luci-app-wol is not set
 # CONFIG_PACKAGE_luci-app-xfrpc is not set
 # CONFIG_PACKAGE_luci-app-xinetd is not set
 # CONFIG_PACKAGE_luci-app-xlnetacc is not set
